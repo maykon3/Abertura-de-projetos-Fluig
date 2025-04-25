@@ -1,7 +1,7 @@
   <h1>Projeto Fluig - Abertura de Projetos</h1>
 
   <div class="section">
-    <h2>1. 1Objetivo</h2>
+    <h2>1. Objetivo</h2>
     <p>Gerenciar as solicitações de <strong>abertura de projetos</strong> utilizando o ambiente <strong>Fluig</strong>.</p>
   </div>
 
