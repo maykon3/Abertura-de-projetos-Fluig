@@ -1,12 +1,12 @@
   <h1>Projeto Fluig - Abertura de Projetos</h1>
 
   <div class="section">
-    <h2>📌 Objetivo</h2>
+    <h2>1. 1Objetivo</h2>
     <p>Gerenciar as solicitações de <strong>abertura de projetos</strong> utilizando o ambiente <strong>Fluig</strong>.</p>
   </div>
 
   <div class="section">
-    <h2>🗂 Estrutura do Processo</h2>
+    <h2>2. Estrutura do Processo</h2>
     <ul>
       <li><strong>Área / Serviços:</strong> Projetos</li>
       <li><strong>Processo:</strong> Solicitação de Abertura de Projetos</li>
@@ -14,7 +14,7 @@
   </div>
 
   <div class="section">
-    <h2>📄 Formulário do Processo</h2>
+    <h2>3. Formulário do Processo</h2>
     <ul>
       <li>Preencher automaticamente:
         <ul>
@@ -52,12 +52,12 @@
   </div>
 
   <div class="section">
-    <h2>📝 Diagrama do Processo</h2>
+    <h2>4. Diagrama do Processo</h2>
     <img src="Abertura de Projetos.png" alt="Diagrama do Processo" width="600" />
   </div>
 
   <div class="section">
-    <h2>🔄 Descrição das Atividades</h2>
+    <h2>5. Descrição das Atividades</h2>
     <h3>Início</h3>
     <ul>
       <li><strong>Grupo:</strong> PERMISSAO_INICIO_PRJ001_SOLICITACAO_DE_ABERT_PROJ</li>
