@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
     if (stateProcess == 0) {
         var data = new Date();
