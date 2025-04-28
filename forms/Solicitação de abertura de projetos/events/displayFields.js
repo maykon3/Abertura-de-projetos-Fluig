@@ -4,8 +4,8 @@ function displayFields(form, customHTML) {
     user = getUser(getValue("WKUser"));
     if (getValue("WKNumState") == 0) {
         form.setValue("idSolicitante", user.colleagueName);
-        form.setValue("numero", getValue("WKNumState"));
     }
+
 
     
     

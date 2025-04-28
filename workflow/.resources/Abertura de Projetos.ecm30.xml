@@ -28,7 +28,7 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>Projeto para aprofundamento de estudos Maykon.</processId>
-      <version>4</version>
+      <version>8</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
     <formId>1466</formId>
@@ -626,7 +626,7 @@
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
         <expressionOrder>1</expressionOrder>
-        <version>4</version>
+        <version>8</version>
         <sequence>10</sequence>
       </conditionProcessStatePK>
       <condition>true</condition>
@@ -638,7 +638,7 @@
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
         <expressionOrder>1</expressionOrder>
-        <version>4</version>
+        <version>8</version>
         <sequence>14</sequence>
       </conditionProcessStatePK>
       <condition>true</condition>
@@ -650,7 +650,7 @@
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
         <expressionOrder>1</expressionOrder>
-        <version>4</version>
+        <version>8</version>
         <sequence>20</sequence>
       </conditionProcessStatePK>
       <condition>true</condition>
@@ -662,7 +662,7 @@
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
         <expressionOrder>1</expressionOrder>
-        <version>4</version>
+        <version>8</version>
         <sequence>24</sequence>
       </conditionProcessStatePK>
       <condition>true</condition>
@@ -674,7 +674,7 @@
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
         <expressionOrder>1</expressionOrder>
-        <version>4</version>
+        <version>8</version>
         <sequence>28</sequence>
       </conditionProcessStatePK>
       <condition>true</condition>
@@ -1046,17 +1046,15 @@
     <WorkflowProcessEvent>
       <workflowProcessEventPK>
         <companyId>1</companyId>
-        <eventId>beforeTaskSave</eventId>
+        <eventId>afterTaskCreate</eventId>
         <processId>AberturadeProjetos</processId>
         <version>1</version>
       </workflowProcessEventPK>
-      <eventDescription>function beforeTaskSave(colleagueId,nextSequenceId,userList){&#xd;
+      <eventDescription>function afterTaskCreate(colleagueId){&#xd;
+    var numSolicitacao = getValue(&quot;WKNumProces&quot;);&#xd;
+	&#xd;
+    hAPI.setCardValue(&quot;numSolicitacao&quot;, numSolicitacao);&#xd;
 &#xd;
-    var current = getValue(&quot;WKNumState&quot;);&#xd;
-    var next = getValue(&quot;WKNumProcess&quot;);&#xd;
-    var user = getValue(&quot;WKUser&quot;);&#xd;
-    &#xd;
-      hAPI.setCardValue(&quot;#idSolicitante&quot;, user, &quot;numero&quot;, next );&#xd;
 }</eventDescription>
     </WorkflowProcessEvent>
   </list>
@@ -1166,7 +1164,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>4</version>
+        <version>8</version>
         <linkSequence>9</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1177,7 +1175,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>4</version>
+        <version>8</version>
         <linkSequence>16</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1188,7 +1186,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>4</version>
+        <version>8</version>
         <linkSequence>17</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1199,7 +1197,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>4</version>
+        <version>8</version>
         <linkSequence>33</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1210,7 +1208,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>4</version>
+        <version>8</version>
         <linkSequence>34</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1221,7 +1219,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>4</version>
+        <version>8</version>
         <linkSequence>35</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1232,7 +1230,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>4</version>
+        <version>8</version>
         <linkSequence>36</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1243,7 +1241,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>4</version>
+        <version>8</version>
         <linkSequence>37</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1254,7 +1252,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>4</version>
+        <version>8</version>
         <linkSequence>39</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1265,7 +1263,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>4</version>
+        <version>8</version>
         <linkSequence>39</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -1276,7 +1274,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>4</version>
+        <version>8</version>
         <linkSequence>39</linkSequence>
         <bendSequence>3</bendSequence>
       </processLinkBendPK>
@@ -1287,7 +1285,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>4</version>
+        <version>8</version>
         <linkSequence>40</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1298,7 +1296,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>4</version>
+        <version>8</version>
         <linkSequence>41</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
