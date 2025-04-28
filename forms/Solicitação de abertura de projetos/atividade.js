@@ -1,9 +1,27 @@
 $(document).ready(function() {
+
+    // Verifica em qual estado esta o diagrama e preenche o capo de data com a data do dia.
     if (stateProcess == 0) {
         var data = new Date();
         var dia = data.getDate();
+        // o valor mes(Month), vem com o valor de um mes antes por o array e de 0 a 11, por isso somamos 1.
         var mes = data.getMonth() + 1;
-        var ano = data.getFullYear();var hoje = dia + '/0'  + mes  + '/' + ano;
+        var ano = data.getFullYear();
+        // Para que os meses fiquem com dois digitos, se o mes for menor que 10, adicionamos um zero a esquerda.
+        if (mes < 10) {
+            mes = '0' + mes;
+        }else {
+          mes = mes;
+        }
+        // Para que os dias fiquem com dois digitos, se o dia for menor que 10, adicionamos um zero a esquerda.
+        if (dia < 10) {
+            dia = '0' + dia;
+            var diaMenor = '0' + dia;
+        }else {
+            diaMenor = dia;
+        }
+
+        var hoje = diaMenor + '/' + mes+ '/' + ano;
         
         $('#calendario').val(hoje);
     }
