@@ -3184,7 +3184,7 @@
     <fonts name="Arial" size="8"/>
     <fonts bold="true" name="Arial" size="8"/>
   </pi:Diagram>
-  <bpmn2:BpmnProcess author="" cardIndex="1466" category="" complementsLevel="1" expedient="Default" extendedFields="&lt;list/&gt;" formSource="server" id="AberturadeProjetos" instruction="" keyWord="" name="Abertura de Projetos" notifyRequisitionerComplements="true" notifyResponsibleComplements="true" serverId="compila" version="2" volume="Default"/>
+  <bpmn2:BpmnProcess author="" cardIndex="1466" category="Abertura de Projetos" complementsLevel="1" expedient="Default" extendedFields="&lt;list/&gt;" formSource="server" id="AberturadeProjetos" instruction="" keyWord="" name="Projeto para aprofundamento de estudos Maykon." notifyRequisitionerComplements="true" notifyResponsibleComplements="true" serverId="compila" version="4" volume="Default"/>
   <bpmn2:BpmnSwimLane cores="FFFFFF" id="swimlane1" name="Diretoria"/>
   <bpmn2:BpmnSwimLane cores="FFFFFF" id="bpmnswimlane2" name="Gerencia Projetos "/>
   <bpmn2:BpmnSwimLane cores="FFFFFF" id="bpmnswimlane3" name="Contabil"/>
@@ -3194,25 +3194,25 @@
   <bpmn2:BpmnStartEvent esforcoCalculo="0" expediente="" id="startevent7" incoming="flow16 flow17 flow41" name="In&#237;cio" outgoing="flow9" selecionaColaboradores="1" signalId="0" type="10"/>
   <bpmn2:BpmnTask authNotify="true" esforcoCalculo="0" executionAttempts="0" expediente="Default" frequency="0" id="task8" incoming="flow9" loopType="0" managerMechanism="" name="Avalia&#231;&#227;o do gestor de Projetos" outgoing="flow11" selecionaColaboradores="1" type="80"/>
   <bpmn2:SequenceFlow atividadeFluxo="" id="flow9" name="" sourceRef="startevent7" targetRef="task8"/>
-  <bpmn2:BpmnGateway condition="&lt;list/&gt;" id="exclusivegateway10" incoming="flow11" name="Gestor Aprova" outgoing="flow13 flow16 flow33" type="120"/>
+  <bpmn2:BpmnGateway condition="&lt;list&gt;&#10;  &lt;org.eclipse.bpmn2.impl.ConditionImpl&gt;&#10;    &lt;order&gt;1&lt;/order&gt;&#10;    &lt;expression&gt;true&lt;/expression&gt;&#10;    &lt;targetTask&gt;task12&lt;/targetTask&gt;&#10;    &lt;conditionType&gt;0&lt;/conditionType&gt;&#10;  &lt;/org.eclipse.bpmn2.impl.ConditionImpl&gt;&#10;&lt;/list&gt;" id="exclusivegateway10" incoming="flow11" name="Gestor Aprova" outgoing="flow13 flow16 flow33" type="120"/>
   <bpmn2:SequenceFlow atividadeFluxo="" id="flow11" name="" sourceRef="task8" targetRef="exclusivegateway10"/>
   <bpmn2:BpmnTask authNotify="true" esforcoCalculo="0" executionAttempts="0" expediente="" frequency="0" id="task12" incoming="flow13" loopType="0" name="Valida documentos " outgoing="flow15" selecionaColaboradores="1" type="80"/>
   <bpmn2:SequenceFlow id="flow13" name="" sourceRef="exclusivegateway10" targetRef="task12"/>
-  <bpmn2:BpmnGateway condition="&lt;list/&gt;" id="exclusivegateway14" incoming="flow15" name="Documentos " outgoing="flow17 flow19 flow34" type="120"/>
+  <bpmn2:BpmnGateway condition="&lt;list&gt;&#10;  &lt;org.eclipse.bpmn2.impl.ConditionImpl&gt;&#10;    &lt;order&gt;1&lt;/order&gt;&#10;    &lt;expression&gt;true&lt;/expression&gt;&#10;    &lt;targetTask&gt;task18&lt;/targetTask&gt;&#10;    &lt;conditionType&gt;0&lt;/conditionType&gt;&#10;  &lt;/org.eclipse.bpmn2.impl.ConditionImpl&gt;&#10;&lt;/list&gt;" id="exclusivegateway14" incoming="flow15" name="Documentos " outgoing="flow17 flow19 flow34" type="120"/>
   <bpmn2:SequenceFlow atividadeFluxo="" id="flow15" name="" sourceRef="task12" targetRef="exclusivegateway14"/>
   <bpmn2:SequenceFlow atividadeFluxo="" id="flow16" name="Revisar dados " sourceRef="exclusivegateway10" targetRef="startevent7"/>
   <bpmn2:SequenceFlow atividadeFluxo="" id="flow17" name="Revisar dados " sourceRef="exclusivegateway14" targetRef="startevent7"/>
   <bpmn2:BpmnTask authNotify="true" esforcoCalculo="0" executionAttempts="0" expediente="" frequency="0" id="task18" incoming="flow19" loopType="0" name="Aprova&#231;&#227;o Controller" outgoing="flow21" selecionaColaboradores="1" type="80"/>
   <bpmn2:SequenceFlow id="flow19" name="" sourceRef="exclusivegateway14" targetRef="task18"/>
-  <bpmn2:BpmnGateway condition="&lt;list/&gt;" id="exclusivegateway20" incoming="flow21" name="Controller aprova?" outgoing="flow23 flow35" type="120"/>
+  <bpmn2:BpmnGateway condition="&lt;list&gt;&#10;  &lt;org.eclipse.bpmn2.impl.ConditionImpl&gt;&#10;    &lt;order&gt;1&lt;/order&gt;&#10;    &lt;expression&gt;true&lt;/expression&gt;&#10;    &lt;targetTask&gt;task22&lt;/targetTask&gt;&#10;    &lt;conditionType&gt;0&lt;/conditionType&gt;&#10;  &lt;/org.eclipse.bpmn2.impl.ConditionImpl&gt;&#10;&lt;/list&gt;" id="exclusivegateway20" incoming="flow21" name="Controller aprova?" outgoing="flow23 flow35" type="120"/>
   <bpmn2:SequenceFlow atividadeFluxo="" id="flow21" name="" sourceRef="task18" targetRef="exclusivegateway20"/>
   <bpmn2:BpmnTask authNotify="true" esforcoCalculo="0" executionAttempts="0" expediente="" frequency="0" id="task22" incoming="flow23" loopType="0" name="Aprova&#231;&#227;o diretoria" outgoing="flow25" selecionaColaboradores="1" type="80"/>
   <bpmn2:SequenceFlow id="flow23" name="" sourceRef="exclusivegateway20" targetRef="task22"/>
-  <bpmn2:BpmnGateway condition="&lt;list/&gt;" id="exclusivegateway24" incoming="flow25" name="Diretoria Aprova" outgoing="flow27 flow36 flow41" type="120"/>
+  <bpmn2:BpmnGateway condition="&lt;list&gt;&#10;  &lt;org.eclipse.bpmn2.impl.ConditionImpl&gt;&#10;    &lt;order&gt;1&lt;/order&gt;&#10;    &lt;expression&gt;true&lt;/expression&gt;&#10;    &lt;targetTask&gt;task26&lt;/targetTask&gt;&#10;    &lt;conditionType&gt;0&lt;/conditionType&gt;&#10;  &lt;/org.eclipse.bpmn2.impl.ConditionImpl&gt;&#10;&lt;/list&gt;" id="exclusivegateway24" incoming="flow25" name="Diretoria Aprova" outgoing="flow27 flow36 flow41" type="120"/>
   <bpmn2:SequenceFlow atividadeFluxo="" id="flow25" name="" sourceRef="task22" targetRef="exclusivegateway24"/>
   <bpmn2:BpmnTask authNotify="true" esforcoCalculo="0" executionAttempts="0" expediente="" frequency="0" id="task26" incoming="flow27" loopType="0" name="Aprova&#231;&#227;o Presidente" outgoing="flow29" selecionaColaboradores="1" type="80"/>
   <bpmn2:SequenceFlow id="flow27" name="" sourceRef="exclusivegateway24" targetRef="task26"/>
-  <bpmn2:BpmnGateway condition="&lt;list/&gt;" id="exclusivegateway28" incoming="flow29" name="Presidente Aprova?" outgoing="flow37 flow39" type="120"/>
+  <bpmn2:BpmnGateway condition="&lt;list&gt;&#10;  &lt;org.eclipse.bpmn2.impl.ConditionImpl&gt;&#10;    &lt;order&gt;1&lt;/order&gt;&#10;    &lt;expression&gt;true&lt;/expression&gt;&#10;    &lt;targetTask&gt;task38&lt;/targetTask&gt;&#10;    &lt;conditionType&gt;0&lt;/conditionType&gt;&#10;  &lt;/org.eclipse.bpmn2.impl.ConditionImpl&gt;&#10;&lt;/list&gt;" id="exclusivegateway28" incoming="flow29" name="Presidente Aprova?" outgoing="flow37 flow39" type="120"/>
   <bpmn2:SequenceFlow atividadeFluxo="" id="flow29" name="" sourceRef="task26" targetRef="exclusivegateway28"/>
   <bpmn2:BpmnTask authNotify="true" esforcoCalculo="0" executionAttempts="0" expediente="" frequency="0" id="task30" incoming="flow33 flow34 flow35 flow36 flow37 flow40" loopType="0" name="Avalia Atendimento " outgoing="flow32" selecionaColaboradores="1" type="80"/>
   <bpmn2:BpmnEndEvent id="endevent31" incoming="flow32" name="Fim" signalId="0" type="60"/>
