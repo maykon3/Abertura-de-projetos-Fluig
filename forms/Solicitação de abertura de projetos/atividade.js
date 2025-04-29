@@ -28,15 +28,26 @@ $(document).ready(function() {
     
 })
 
+// Função para pegar o valor do campo de data e colocar no campo de data do formulario.
 function setSelectedZoomItem(selectedItem) {
     if(selectedItem.inputId == "empresa") {
-       $("#codEmpresa").val(selectedItem["Filial"]);
+       $("#codEmpresa").val(selectedItem["Descricao"]);
     }
  }
- function removedZoomItem(removedItem) {
-    if (removedItem.inputId == "empresa") {
-        $("#codEmpresa").val("");
+
+ function setSelectedZoomItem(item) {
+    if(item.inputId == "fornecedor") {
+       $("#valor").val(selectedItem["cnpj"]);
     }
+ }
+ 
+ // Função para o botao de incluir ao ser clicado add um linha na tabela pai e filho 
+ function addLinha(){
+    wdkAddChild("respoTable");   
+}
+
+function removeLinha(elemento){
+    fnWdkRemoveChild(elemento); 
 }
 
 

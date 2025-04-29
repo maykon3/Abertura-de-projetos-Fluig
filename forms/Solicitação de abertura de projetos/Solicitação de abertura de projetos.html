@@ -52,27 +52,38 @@
 										{
 											'displayKey':'Empresa',
 											'placeholder': 'Selecione uma Empresa',
-											'datasetId':'dsEmpresaM',
+											'datasetId':'dsGrupoempresa',
 											'fields':[{
-												'field':'Matriz',
-												'label':'Matriz',
+												'field':'Cod',
+												'label':'Cod',
 												'standard':true
 											},{
 												'field':'Empresa',
 												'label':'Empresa',
 												'standard':true
-											},{
-												'field':'Filial',
-												'label':'Filial',
-												'visible': 'false'
 											}]
 										}">
-										<input type="hidden" class="form-control" id="hidden_Cod" name="hidden_Cod">
+							<input type="hidden" class="form-control" id="hidden_Cod" name="hidden_Cod">
 						</div>
 						<div class="form-group col-md-6">
 							<label for="filial">Filial </label>
-							<input type="text" class="form-control" id="codEmpresa" name="codEmpresa" value="" readonly>
-						</div>						
+							<input type="zoom" class="form-control" id="codEmpresa" name="codEmpresa" data-zoom="
+										{
+											'displayKey':'Descricao',
+											'datasetId':'dsFiliais',
+											'fields':[{
+												'field':'Filial',
+												'label':'Filial',
+												'standard':true
+											},{
+												'field':'Descricao',
+												'label':'Descricao',
+												'standard':true
+											}]
+										}">
+							<input type="hidden" class="form-control" id="hidden_Filial" name="hidden_Filial">
+
+						</div>
 					</div>
 					<div class="row">
 						<div class="form-group col-md-6">
@@ -87,14 +98,106 @@
 							<label for="insumos" class="required">Grupo de ativos e insumos estrategicos </label>
 							<textarea class="form-control" name="insumos" rows="3"></textarea>
 						</div>
-					 </div>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading" id="corAzul">
+					<h3 class="panel-title" style="color: rgb(255, 255, 255);">Orçamento de gasto previsto</h3>
+				</div>
+				<div class="panel-body">
+					<div class="form-group">
+						<button type="button" class="btn btn-success" id="botaoIncluir" style="cursor: pointer;"
+							onclick="addLinha();">Incluir</button>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<table tablename="respoTable" class="table table-striped" nodeletebutton=true
+								noaddbutton=true>
+								<thead>
+									<tr> </tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<div class="col-md-1">
+												<i class="fluigicon fluigicon-remove-sign icon-thumbnail-xs"
+													aria-hidden="true" style="cursor: pointer;"
+													onclick="removeLinha(this);"></i>
+											</div>
+										</td>
+										<td>
+											<div class="row">
+												<div class="form-group col-md-6">
+													<label for="fornecedor" class="required">Nome do Fornecedor </label>
+													<input type="zoom" class="form-control" id="fornecedor"
+														name="fornecedor" data-zoom="
+															{
+																'displayKey':'nome',
+																'dataset':'dsFornecedorM',
+																'fields':[{
+																	'field':'nome',
+																	'label':'nome',
+																	'standard':true
+																},{
+																	'field':'cnpj',
+																	'label':'cnpj',
+																	'standard':true
+																}]
+															}">
+													<input type="hidden" class="form-control" id="hidden_fornecedor"
+														name="hidden_fornecedor">
 
+												</div>
+												<div class="form-group col-md-6">
+													<label for="valor" class="required">CNPJ do Fornecedor </label>
+													<input type="text" class="form-control" id="valor" name="valor"
+														mask=" 00.000.000/0000-00" readonly>
+												</div>
+											</div>
 
+											<div class="row">
+												<div class="form-group col-md-4">
+													<label for="quantia" class="required">Quantidade </label>
+													<input type="text" class="form-control" id="quantia" name="quantia">
+												</div>
+												<div class="form-group col-md-4">
+													<label for="unitario" class="required">Valor Unitário </label>
+													<input type="number" class="form-control" id="unitario"
+														name="unitario">
+												</div>
+												<div class="form-group col-md-4">
+													<label for="total" class="required">Valor Total </label>
+													<input type="number" class="form-control" id="total" name="total"
+														readonly>
+												</div>
+											</div>
 
+											<div class="row">
+												<div class="form-group  col-md-12">
+													<label for="obs" class="required">Observações </label>
+													<textarea class="form-control" name="obs" rows="3"></textarea>
+												</div>
+
+											</div>
+											<div class="row">
+												<div class="form-group col-md-12"></div>
+												<div class="form-group col-md-10"></div>
+												<div class="form-group col-md-2">
+													<label for="valorTotal">Valor total</label>
+													<input type="number" class="form-control" id="valorTotal"
+														name="valorTotal" readonly>
+										</td>
+									</tr>
+								</tbody>
+
+							</table>
+						</div>
+
+					</div>
 
 				</div>
 			</div>
-	</div>
 	</div>
 	<div class="panel panel-default">
 		<div class="panel-body">
