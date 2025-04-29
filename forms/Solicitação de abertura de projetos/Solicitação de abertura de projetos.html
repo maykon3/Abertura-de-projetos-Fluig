@@ -48,46 +48,33 @@
 					<div class="row">
 						<div class="form-group col-md-6">
 							<label for="empresa" class="required">Empresa </label>
-							<input type="zoom" class="form-control" name="zoomEmpresa" data-zoom="
-								{
-									'displayKey':'Empresa',
-									'placeholder': 'Selecione a Empresa',
-									'datasetId':'dsGrupoempresa',
-									'filterValues': '',
-									'fields':[{
-										'field':'Cod',
-										'label':'Cod',
-									},
-									{
-										'field': 'Empresa',
-										'label': 'Empresa',	
-										'standard': 'true',
-										'search': 'true'
-									}]
-								}">
-								
+							<input type="zoom" class="form-control" id="empresa" name="empresa" data-zoom="
+										{
+											'displayKey':'Empresa',
+											'placeholder': 'Selecione uma Empresa',
+											'datasetId':'dsEmpresaM',
+											'fields':[{
+												'field':'Matriz',
+												'label':'Matriz',
+												'standard':true
+											},{
+												'field':'Empresa',
+												'label':'Empresa',
+												'standard':true
+											},{
+												'field':'Filial',
+												'label':'Filial',
+												'visible': 'false'
+											}]
+										}">
+										<input type="hidden" class="form-control" id="hidden_Cod" name="hidden_Cod">
 						</div>
-						
 						<div class="form-group col-md-6">
-							<label for="filial" class="required">Filial </label>
-							<input type="zoom" class="form-control" id="zoomFilial" name="zoomFilial" data-zoom="
-								{
-									'displayKey':'Descricao',
-									'placeholder': 'Selecione a Filial',
-									'datasetId':'dsFiliais',
-									'fields':[{
-										'field':'Filial',
-										'label':'Cod'
-									},{
-										'field': 'Descricao',
-										'label': 'Descricao',	
-										'standard': 'true',
-										'search': 'true'
-									}]
-								}">
-
-						</div>
-						
+							<label for="filial">Filial </label>
+							<input type="text" class="form-control" id="codEmpresa" name="codEmpresa" value="" readonly>
+						</div>						
+					</div>
+					<div class="row">
 						<div class="form-group col-md-6">
 							<label for="principal" class="required">Objetico principal do projeto </label>
 							<textarea class="form-control" name="principal" rows="3"></textarea>
@@ -100,10 +87,10 @@
 							<label for="insumos" class="required">Grupo de ativos e insumos estrategicos </label>
 							<textarea class="form-control" name="insumos" rows="3"></textarea>
 						</div>
-					</div>
-					
-						
-					
+					 </div>
+
+
+
 
 				</div>
 			</div>

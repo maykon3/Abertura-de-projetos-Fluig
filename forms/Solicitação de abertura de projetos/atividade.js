@@ -28,5 +28,16 @@ $(document).ready(function() {
     
 })
 
+function setSelectedZoomItem(selectedItem) {
+    if(selectedItem.inputId == "empresa") {
+       $("#codEmpresa").val(selectedItem["Filial"]);
+    }
+ }
+ function removedZoomItem(removedItem) {
+    if (removedItem.inputId == "empresa") {
+        $("#codEmpresa").val("");
+    }
+}
+
 
 
