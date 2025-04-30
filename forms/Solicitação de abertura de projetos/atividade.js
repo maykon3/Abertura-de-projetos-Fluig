@@ -29,17 +29,20 @@ $(document).ready(function() {
 })
 
 // Função para pegar o valor do campo de data e colocar no campo de data do formulario.
-function setSelectedZoomItem(selectedItem) {
-    if(selectedItem.inputId == "empresa") {
-       $("#codEmpresa").val(selectedItem["Descricao"]);
-    }
- }
-
- function setSelectedZoomItem(item) {
-    if(item.inputId == "fornecedor") {
+ function setSelectedZoomItem(selectedItem) {
+    if(selectedItem.inputId == "fornecedor") {
        $("#valor").val(selectedItem["cnpj"]);
     }
  }
+
+ // Forma de acessar campo zoom em uma tabela pai e filho 
+ function setSelectedZoomItem(selectedItem){
+    const [inputName, inputIndex] = selectedItem.inputName.split("___");
+ 
+    if (inputName === "fornecedor") {
+        $(`#valor___${inputIndex}`).val(selectedItem.cnpj);
+    }
+}
  
  // Função para o botao de incluir ao ser clicado add um linha na tabela pai e filho 
  function addLinha(){

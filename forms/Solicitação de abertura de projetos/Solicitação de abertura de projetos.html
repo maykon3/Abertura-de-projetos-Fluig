@@ -131,28 +131,29 @@
 												<div class="form-group col-md-6">
 													<label for="fornecedor" class="required">Nome do Fornecedor </label>
 													<input type="zoom" class="form-control" id="fornecedor"
-														name="fornecedor" data-zoom="
+														name="fornecedor" data-zoom="{
+														'displayKey': 'nome',
+														'datasetId': 'dsFornecedorM',
+														'fields': [
 															{
-																'displayKey':'nome',
-																'dataset':'dsFornecedorM',
-																'fields':[{
-																	'field':'nome',
-																	'label':'nome',
-																	'standard':true
-																},{
-																	'field':'cnpj',
-																	'label':'cnpj',
-																	'standard':true
-																}]
-															}">
+																'field':'nome',
+																'label':'nome'
+															},
+															{
+																'field': 'cnpj',
+																'label': 'cnpj',	
+																'standard': 'true',
+																'search': 'true'
+															}
+															]
+											}">
 													<input type="hidden" class="form-control" id="hidden_fornecedor"
 														name="hidden_fornecedor">
 
 												</div>
 												<div class="form-group col-md-6">
 													<label for="valor" class="required">CNPJ do Fornecedor </label>
-													<input type="text" class="form-control" id="valor" name="valor"
-														mask=" 00.000.000/0000-00" readonly>
+													<input type="text" class="form-control" id="valor" name="valor" readonly>
 												</div>
 											</div>
 
