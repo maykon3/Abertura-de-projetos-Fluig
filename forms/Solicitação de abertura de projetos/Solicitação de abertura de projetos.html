@@ -50,7 +50,8 @@
 					<div class="row">
 						<div class="form-group col-md-6">
 							<label for="empresa" class="required">Empresa </label>
-							<input type="zoom" class="form-control" id="empresa" name="empresa" data-zoom="
+							<input type="zoom" class="form-control" id="empresa" name="empresa" zoomvalue="Cod"
+								data-zoom="
 										{
 											'displayKey':'Empresa',
 											'placeholder': 'Selecione uma Empresa',
@@ -64,30 +65,32 @@
 												'label':'Empresa',
 												'standard':true
 											}]
-										}">
-							<input type="hidden" class="form-control" id="hidden_Cod" name="hidden_Cod">
+										}" value="">
+							<input type="hidden" class="form-control" id="hidden_empresa" name="hidden_empresa">
 						</div>
 						<div class="form-group col-md-6">
 							<label for="codEmpresa">Filial </label>
-							<input type="zoom" class="form-control" id="codEmpresa" name="codEmpresa" data-zoom="
+							<input type="zoom" class="form-control" id="codEmpresa" name="codEmpresa"
+								zoomvalue="Filial" data-zoom="
 										{
-											'displayKey':'Empresa',
-											'placeholder': 'Selecione uma Empresa',
-											'datasetId':'dsGrupoempresa',
+											'displayKey':'Descricao',
+											'placeholder': 'Selecione uma Filial',
+											'datasetId':'dsFiliais',
 											'fields':[{
-												'field':'Cod',
-												'label':'Cod',
+												'field':'Descricao',
+												'label':'Descricao',
 												'standard':true
 											},{
-												'field':'Empresa',
-												'label':'Empresa',
+												'field':'Filial',
+												'label':'Filial',
 												'standard':true
 											}]
 										}">
-
+							<input type="hidden" class="form-control" id="hidden_codEmpresa" name="hidden_codEmpresa"
+								value="">
 						</div>
 					</div>
-					<div class="row">
+					<div class=" row">
 						<div class="form-group col-md-6">
 							<label for="principal" class="required">Objetico principal do projeto </label>
 							<textarea class="form-control" id="principal" name="principal" rows="3"></textarea>
@@ -131,9 +134,11 @@
 										<td>
 											<div class="row">
 												<div class="form-group col-md-6">
-													<label for="fornecedor" class="required">Nome do Fornecedor </label>
-													<input type="zoom" class="form-control" id="fornecedor" placeholder="Selecione um Fornecedor"
-														name="fornecedor" data-zoom="{
+													<label for="fornecedor" class="required">Nome do Fornecedor
+													</label>
+													<input type="zoom" class="form-control" id="fornecedor"
+														placeholder="Selecione um Fornecedor" name="fornecedor"
+														data-zoom="{
 														'displayKey': 'nome',
 														'datasetId': 'dsFornecedorM',
 														'fields': [
@@ -163,26 +168,28 @@
 											<div class="row">
 												<div class="form-group col-md-4">
 													<label for="quantia" class="required">Quantidade </label>
-													<input type="text" class="form-control" id="quantia" name="quantia" placeholder="Insira a sua Quantidade"
-													onblur="calcularTotal(this.id);">
+													<input type="text" class="form-control" id="quantia" name="quantia"
+														placeholder="Insira a sua Quantidade"
+														onblur="calcularTotal(this.id);">
 												</div>
 												<div class="form-group col-md-4">
 													<label for="unitario" class="required">Valor Unitário </label>
 													<input type="text" class="form-control" id="unitario"
 														name="unitario" placeholder="Insira o valor de cada produto"
-														onblur="calcularTotal(this.id);" >
+														onblur="calcularTotal(this.id);">
 												</div>
 												<div class="form-group col-md-4">
 													<label for="total" class="required">Valor Total </label>
 													<input type="text" class="form-control" id="total" name="total"
-														 readonly>
+														readonly>
 												</div>
 											</div>
 
 											<div class="row">
 												<div class="form-group  col-md-12">
 													<label for="obs" class="required">Observações </label>
-													<textarea class="form-control" name="obs" rows="3" placeholder="Insira uma Observação"></textarea>
+													<textarea class="form-control" id="obs" name="obs" rows="3"
+														placeholder="Insira uma Observação"></textarea>
 												</div>
 
 											</div>
@@ -197,8 +204,7 @@
 								<div class="form-group col-md-10"></div>
 								<div class="form-group col-md-2">
 									<label for="valorTotal">Valor total</label>
-									<input type="text" class="form-control" id="valorTotal" name="valorTotal"
-										readonly>
+									<input type="text" class="form-control" id="valorTotal" name="valorTotal" readonly>
 								</div>
 							</div>
 
@@ -206,6 +212,155 @@
 
 					</div>
 				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading" id="corAzul">
+					<h3 class="panel-title" style="color: rgb(255, 255, 255);">Fonte de recursos</h3>
+				</div>
+				<div class="panel-body">
+					<div class="form-group">
+						<button type="button" class="btn btn-success" id="botaoIncluir" style="cursor: pointer;"
+							onclick="addFonte();">Incluir</button>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<table tablename="tableFonte" class="table table-striped" nodeletebutton=true
+								noaddbutton=true>
+								<thead>
+									<tr> </tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<div class="col-md-1">
+												<i class="fluigicon fluigicon-remove-sign icon-thumbnail-xs"
+													aria-hidden="true" style="cursor: pointer;"
+													onclick="removeLinha(this);"></i>
+											</div>
+										</td>
+										<td>
+											<div class="row">
+												<div class="form-group col-md-4">
+													<label for="instituicao" class="required">Instituição </label>
+													<input type="text" name="instituicao" id="instituicao"
+														class="form-control" placeholder="Insira o nome da Instituição">
+
+												</div>
+												<div class="form-group col-md-4">
+													<label for="finaciamento" class="required">Mod. Financiamento
+													</label>
+													<input type="text" class="form-control" id="finaciamento"
+														name="finaciamento">
+												</div>
+												<div class="form-group col-md-4">
+													<label for="taxa" class="required">Taxa a.a </label>
+													<input type="text" class="form-control" id="taxa" name="taxa">
+												</div>
+											</div>
+											<div class="row">
+												<div class="form-group col-md-4">
+													<label for="prazoCarencia" class="required">Prazo carência
+													</label>
+													<input type="date" class="form-control" id="prazoCarencia"
+														name="prazoCarencia" value="">
+												</div>
+												<div class="form-group col-md-4">
+													<label for="prazoFinanciamento" class="required">Prazo do
+														financiamento </label>
+													<input type="date" name="prazoFinanciamento" id="prazoFinanciamento"
+														class="form-control" value="">
+
+												</div>
+												<div class="form-group col-md-4">
+												</div>
+											</div>
+
+										</td>
+									</tr>
+								</tbody>
+							</table>
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading" id="corAzul">
+					<h3 class="panel-title" style="color: rgb(255, 255, 255);">Motivos do investimento </h3>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="form-group col-md-3 ">
+							<label for="subAtivos" class="required">Substituição de ativos (inclusive sinistros) </label>
+							<select class="form-control" name="subAtivos" id="subAtivos">
+								<option value="0">--Selecione--</option>
+								<option value="1">Sim</option>
+								<option value="2">Não</option>
+							</select>
+						</div>
+						<div class="form-group col-md-3 ">
+							<label for="morAtivos" class="required">Modernização de ativos </label>
+							<select class="form-control" name="morAtivos" id="morAtivos">
+								<option value="0">--Selecione--</option>
+								<option value="1">Sim</option>
+								<option value="2">Não</option>
+							</select>
+						</div>
+						<div class="form-group col-md-3 ">
+							<label for="melhOpera" class="required">Melhoria da operação (tecnologia) </label>
+							<select class="form-control" name="melhOpera" id="melhOpera">
+								<option value="0">--Selecione--</option>
+								<option value="1">Sim</option>
+								<option value="2">Não</option>
+							</select>
+						</div>
+						<div class="form-group col-md-3 ">
+							<label for="ampliacao" class="required">Ampliação da capacidade operacional </label>
+							<select class="form-control" name="ampliacao" id="ampliacao">
+								<option value="0">--Selecione--</option>
+								<option value="1">Sim</option>
+								<option value="2">Não</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-md-3 ">
+							<label for="exigContratuais" class="required">Exigências contratuais do cliente </label>
+							<select class="form-control" name="exigContratuais" id="exigContratuais">
+								<option value="0">--Selecione--</option>
+								<option value="1">Sim</option>
+								<option value="2">Não</option>
+							</select>
+						</div>
+						<div class="form-group col-md-3 ">
+							<label for="primarizacao" class="required">Primarização e planejamento tributário </label>
+							<select class="form-control" name="primarizacao" id="primarizacao">
+								<option value="0">--Selecione--</option>
+								<option value="1">Sim</option>
+								<option value="2">Não</option>
+							</select>
+						</div>
+						<div class="form-group col-md-3 ">
+							<label for="exigAmbientais" class="required">Exigências ambientais de segurança </label>
+							<select class="form-control" name="exigAmbientais" id="exigAmbientais">
+								<option value="0">--Selecione--</option>
+								<option value="1">Sim</option>
+								<option value="2">Não</option>
+							</select>
+						</div>
+						<div class="form-group col-md-3 ">
+							<label for="novosProdutos" class="required">Novos produtos e serviços </label>
+							<select class="form-control" name="novosProdutos" id="novosProdutos">
+								<option value="0">--Selecione--</option>
+								<option value="1">Sim</option>
+								<option value="2">Não</option>
+							</select>
+						</div>
+					</div>
+				</div>
+
+
 			</div>
 
 

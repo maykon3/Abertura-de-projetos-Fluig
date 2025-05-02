@@ -52,6 +52,10 @@ function removedZoomItem(removedItem) {
     }
 }
 
+function addFonte(){
+    wdkAddChild("tableFonte");
+}
+
 // Função para o botao de incluir ao ser clicado add um linha na tabela pai e filho 
 function addLinha() {
     wdkAddChild("respoTable");
@@ -102,6 +106,10 @@ function removeLinha(elemento) {
     fnWdkRemoveChild(elemento);
     totalFinal();
     
+}
+
+function removeFonte(element) {
+    fnWdkRemoveChild(element);
 }
 
 
