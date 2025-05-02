@@ -68,29 +68,29 @@
 							<input type="hidden" class="form-control" id="hidden_Cod" name="hidden_Cod">
 						</div>
 						<div class="form-group col-md-6">
-							<label for="filial">Filial </label>
+							<label for="codEmpresa">Filial </label>
 							<input type="zoom" class="form-control" id="codEmpresa" name="codEmpresa" data-zoom="
 										{
-											'displayKey':'Descricao',
-											'datasetId':'dsFiliais',
+											'displayKey':'Empresa',
+											'placeholder': 'Selecione uma Empresa',
+											'datasetId':'dsGrupoempresa',
 											'fields':[{
-												'field':'Filial',
-												'label':'Filial',
+												'field':'Cod',
+												'label':'Cod',
 												'standard':true
 											},{
-												'field':'Descricao',
-												'label':'Descricao',
+												'field':'Empresa',
+												'label':'Empresa',
 												'standard':true
 											}]
 										}">
-							<input type="hidden" class="form-control" id="hidden_Filial" name="hidden_Filial">
 
 						</div>
 					</div>
 					<div class="row">
 						<div class="form-group col-md-6">
 							<label for="principal" class="required">Objetico principal do projeto </label>
-							<textarea class="form-control" name="principal" rows="3"></textarea>
+							<textarea class="form-control" id="principal" name="principal" rows="3"></textarea>
 						</div>
 						<div class="form-group col-md-6">
 							<label for="complemantar" class="required">Objetico complemantar do projeto </label>
@@ -132,7 +132,7 @@
 											<div class="row">
 												<div class="form-group col-md-6">
 													<label for="fornecedor" class="required">Nome do Fornecedor </label>
-													<input type="zoom" class="form-control" id="fornecedor"
+													<input type="zoom" class="form-control" id="fornecedor" placeholder="Selecione um Fornecedor"
 														name="fornecedor" data-zoom="{
 														'displayKey': 'nome',
 														'datasetId': 'dsFornecedorM',
@@ -163,13 +163,14 @@
 											<div class="row">
 												<div class="form-group col-md-4">
 													<label for="quantia" class="required">Quantidade </label>
-													<input type="text" class="form-control" id="quantia" name="quantia"
+													<input type="text" class="form-control" id="quantia" name="quantia" placeholder="Insira a sua Quantidade"
 													onblur="calcularTotal(this.id);">
 												</div>
 												<div class="form-group col-md-4">
 													<label for="unitario" class="required">Valor Unitário </label>
 													<input type="text" class="form-control" id="unitario"
-														name="unitario" mask="000.000.000,00" onblur="calcularTotal(this.id);">
+														name="unitario" placeholder="Insira o valor de cada produto"
+														onblur="calcularTotal(this.id);" >
 												</div>
 												<div class="form-group col-md-4">
 													<label for="total" class="required">Valor Total </label>
@@ -181,7 +182,7 @@
 											<div class="row">
 												<div class="form-group  col-md-12">
 													<label for="obs" class="required">Observações </label>
-													<textarea class="form-control" name="obs" rows="3"></textarea>
+													<textarea class="form-control" name="obs" rows="3" placeholder="Insira uma Observação"></textarea>
 												</div>
 
 											</div>

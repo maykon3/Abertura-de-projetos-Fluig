@@ -16,7 +16,7 @@ $(document).ready(function () {
         // Para que os dias fiquem com dois digitos, se o dia for menor que 10, adicionamos um zero a esquerda.
         if (dia < 10) {
             dia = '0' + dia;
-            var diaMenor = '0' + dia;
+            var diaMenor = dia;
         } else {
             diaMenor = dia;
         }
@@ -31,9 +31,9 @@ $(document).ready(function () {
 
 
 // Função para pegar o valor do campo de data e colocar no campo de data do formulario.
-function setSelectedZoomItem(selectedItem) {
-    if (selectedItem.inputId == "fornecedor") {
-        $("#valor").val(selectedItem["cnpj"]);
+function setSelectedZoomItem(item) {
+    if (item.inputId === "empresa") {
+        $("#codEmpresa").val(item["Empresa"]);
     }
 }
 
@@ -42,7 +42,7 @@ function setSelectedZoomItem(selectedItem) {
     const [inputName, inputIndex] = selectedItem.inputName.split("___");
 
     if (inputName === "fornecedor") {
-        $(`#valor___${inputIndex}`).val(selectedItem.cnpj);
+        $(`#valor___${inputIndex}`).val(selectedItem["cnpj"]);
     }
 }
 function removedZoomItem(removedItem) {
@@ -55,9 +55,13 @@ function removedZoomItem(removedItem) {
 // Função para o botao de incluir ao ser clicado add um linha na tabela pai e filho 
 function addLinha() {
     wdkAddChild("respoTable");
-    
+    var linha = newId
+
+    // Torna os camppos de text ara numericos com estilos de mascara 
+    $("#quantia___" + linha).mask('000.000.000.000.000', {reverse: true});
+    $("#unitario___" + linha).mask('000.000.000.000.000,00', {reverse: true});
+
     calcularTotal();
-   
 
 }
 
@@ -80,7 +84,6 @@ function calcularTotal(idCampo) {
 
 }
 
-
 function totalFinal() {
     var totalGeral = 0;
     $("input[id^='total___']").each(function () {
@@ -97,6 +100,7 @@ function totalFinal() {
 
 function removeLinha(elemento) {
     fnWdkRemoveChild(elemento);
+    totalFinal();
     
 }
 
