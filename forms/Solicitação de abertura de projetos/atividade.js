@@ -24,6 +24,11 @@ $(document).ready(function () {
         var hoje = diaMenor + '/' + mes + '/' + ano;
 
         $('#calendario').val(hoje);
+
+        $("#rowMotivos").hide();
+    }
+    else if (stateProcess == 1) {
+        $("#rowMotivos").show();
     }
 
 })

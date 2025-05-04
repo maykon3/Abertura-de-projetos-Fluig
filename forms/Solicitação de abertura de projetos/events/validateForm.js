@@ -39,11 +39,12 @@ function validateForm(form) {
             if (form.getValue("quantia___" + numLinha) == "") {
                 throw "A quantidade não foi informada na linha ";
             }
-            if (form.getValue("obs__" + numLinha) == "") {
-                throw "O valor unitário não foi informado na linha ";
-            }
+            
 
             if (form.getValue("unitario___" + numLinha) == "") {
+                throw "O valor unitário não foi informado na linha ";
+            }
+            if (form.getValue("obs___" + numLinha) == "") {
                 throw "O valor unitário não foi informado na linha ";
             }
         }
