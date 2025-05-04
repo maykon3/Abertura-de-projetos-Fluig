@@ -7,6 +7,9 @@ function displayFields(form, customHTML) {
     if (getValue("WKNumState") == 0) {
         form.setValue("idSolicitante", user.colleagueName);
     }
+    if (getValue("WKNumState") == 8) {
+        form.setValue("respoAnalise", user.colleagueName);
+    }
     
 }
 

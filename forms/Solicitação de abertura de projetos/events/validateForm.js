@@ -1,4 +1,4 @@
-function validateForm(form) {
+/*function validateForm(form) {
     // Valida campos principais
     if (form.getValue('empresa') == "") {
         throw "A Empresa não foi informada!";
@@ -79,5 +79,5 @@ function validateForm(form) {
             }
         }
     }
-}
+}*/
 

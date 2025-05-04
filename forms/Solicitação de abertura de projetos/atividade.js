@@ -1,8 +1,6 @@
 $(document).ready(function () {
-
-    // Verifica em qual estado esta o diagrama e preenche o capo de data com a data do dia.
-    if (stateProcess == 0) {
-        var data = new Date();
+    
+    var data = new Date();
         var dia = data.getDate();
         // o valor mes(Month), vem com o valor de um mes antes por o array e de 0 a 11, por isso somamos 1.
         var mes = data.getMonth() + 1;
@@ -23,12 +21,19 @@ $(document).ready(function () {
 
         var hoje = diaMenor + '/' + mes + '/' + ano;
 
-        $('#calendario').val(hoje);
 
-        $("#rowMotivos").hide();
+    // Verifica em qual estado esta o diagrama e preenche o capo de data com a data do dia.
+    if (stateProcess == 0) {
+        
+        $('#calendario').val(hoje);
+    
+        // Esconde a div do gesto no estado 0 do diagrama.
+        $("#rowValGestor").hide();
     }
-    else if (stateProcess == 1) {
-        $("#rowMotivos").show();
+    else if (stateProcess == 8) {
+
+        $("#rowValGestor").show();
+        $('#dataValidacao').val(hoje);
     }
 
 })

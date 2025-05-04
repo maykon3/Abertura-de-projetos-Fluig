@@ -32,8 +32,8 @@
 								readonly>
 						</div>
 						<div class="form-group col-md-8">
-							<label for="email">Solicitante</label>
-							<input type="email" class="form-control" id="idSolicitante" name="idSolicitante" readonly>
+							<label for="idSolicitante">Solicitante</label>
+							<input type="text" class="form-control" id="idSolicitante" name="idSolicitante" readonly>
 						</div>
 						<div class="form-group col-md-2">
 							<label for="telefone">N°. Solicitação</label>
@@ -70,8 +70,8 @@
 						</div>
 						<div class="form-group col-md-6">
 							<label for="codEmpresa">Filial </label>
-							<input type="zoom" class="form-control" id="codEmpresa" name="codEmpresa"
-								zoomvalue="Filial" data-zoom="
+							<input type="zoom" class="form-control" id="codEmpresa" name="codEmpresa" zoomvalue="Filial"
+								data-zoom="
 										{
 											'displayKey':'Descricao',
 											'placeholder': 'Selecione uma Filial',
@@ -292,7 +292,8 @@
 				<div class="panel-body">
 					<div class="row">
 						<div class="form-group col-md-3 ">
-							<label for="subAtivos" class="required">Substituição de ativos (inclusive sinistros) </label>
+							<label for="subAtivos" class="required">Substituição de ativos (inclusive sinistros)
+							</label>
 							<select class="form-control" name="subAtivos" id="subAtivos">
 								<option value="0">--Selecione--</option>
 								<option value="1">Sim</option>
@@ -324,7 +325,7 @@
 							</select>
 						</div>
 					</div>
-					<div class="row" id ="rowMotivos">
+					<div class="row" id="rowMotivos">
 						<div class="form-group col-md-3 ">
 							<label for="exigContratuais" class="required">Exigências contratuais do cliente </label>
 							<select class="form-control" name="exigContratuais" id="exigContratuais">
@@ -361,7 +362,43 @@
 				</div>
 
 
+
 			</div>
+			<div class="panel panel-default" id="rowValGestor">
+				<div class="panel-heading" id="corAzul">
+					<h3 class="panel-title" style="color: rgb(255, 255, 255);">Validação Gestor Projetos</h3>
+				</div>
+				<div class="panel-body">
+					<div class="row" id="rowValGestor">
+						<div class="form-group col-md-4">
+							<label for="respoAnalise">Responsável pela análise</label>
+							<input type="text" class="form-control" id="respoAnalise" name="respoAnalise" readonly>
+						</div>
+						<div class="form-group col-md-2">
+							<label for="dataValidacao">Data da validação</label>
+							<input class="form-control" type="text" id="dataValidacao" name="dataValidacao"
+								readonly>
+						</div>
+						<div class="form-group col-md-4">
+							<label for="aprovProjeto" class="required">Aprovação do projeto </label>
+							<select class="form-control" name="aprovProjeto" id="aprovProjeto">
+								<option value="0">Selecione</option>
+								<option value="1">Revisar dados</option>
+								<option value="2">Aprovado</option>
+								<option value="2">Reprovado</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group  col-md-12">
+							<label for="obsValidacao" class="required">Observações </label>
+							<textarea class="form-control" id="obsValidacao" name="obsValidacao" rows="3"
+								placeholder="Insira uma Observação"></textarea>
+						</div>
+
+					</div>
+				</div>
+
 
 
 		</form>
