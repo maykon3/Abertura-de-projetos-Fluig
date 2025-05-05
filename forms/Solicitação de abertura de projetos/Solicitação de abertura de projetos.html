@@ -360,32 +360,28 @@
 						</div>
 					</div>
 				</div>
-
-
-
 			</div>
 			<div class="panel panel-default" id="rowValGestor">
 				<div class="panel-heading" id="corAzul">
 					<h3 class="panel-title" style="color: rgb(255, 255, 255);">Validação Gestor Projetos</h3>
 				</div>
 				<div class="panel-body">
-					<div class="row" id="rowValGestor">
+					<div class="row">
 						<div class="form-group col-md-4">
 							<label for="respoAnalise">Responsável pela análise</label>
 							<input type="text" class="form-control" id="respoAnalise" name="respoAnalise" readonly>
 						</div>
 						<div class="form-group col-md-2">
 							<label for="dataValidacao">Data da validação</label>
-							<input class="form-control" type="text" id="dataValidacao" name="dataValidacao"
-								readonly>
+							<input class="form-control" type="text" id="dataValidacao" name="dataValidacao" readonly>
 						</div>
 						<div class="form-group col-md-4">
 							<label for="aprovProjeto" class="required">Aprovação do projeto </label>
 							<select class="form-control" name="aprovProjeto" id="aprovProjeto">
-								<option value="0">Selecione</option>
-								<option value="1">Revisar dados</option>
-								<option value="2">Aprovado</option>
-								<option value="3">Reprovado</option>
+								<option value="">Selecione</option>
+								<option value="revisar_dados">Revisar dados</option>
+								<option value="aprovado">Aprovado</option>
+								<option value="reprovado">Reprovado</option>
 							</select>
 						</div>
 					</div>
@@ -398,7 +394,73 @@
 
 					</div>
 				</div>
+			</div>
+			<div class="panel panel-default" id="rowValContabil">
+				<div class="panel-heading" id="corAzul">
+					<h3 class="panel-title" style="color: rgb(255, 255, 255);">Validação e cadastro contábil</h3>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="form-group col-md-4">
+							<label for="usuarioRespo">Usuário responsável pela validação</label>
+							<input type="text" class="form-control" id="usuarioRespo" name="usuarioRespo" readonly>
+						</div>
+						<div class="form-group col-md-2">
+							<label for="dataContabil">Data</label>
+							<input class="form-control" type="text" id="dataContabil" name="dataContabil" readonly>
+						</div>
+						<div class="form-group col-md-4">
+							<label for="aprovContabil" class="required">Dados Conferem? </label>
+							<select class="form-control" name="aprovContabil" id="aprovContabil">
+								<option value="">Selecione...</option>
+								<option value="revisar_dados">Revisar dados</option>
+								<option value="aprovado">Aprovado</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group  col-md-12">
+							<label for="obsContabil" class="required">Observação </label>
+							<textarea class="form-control" id="obsContabil" name="obsContabil" rows="3"
+								placeholder="Insira uma Observação"></textarea>
+						</div>
 
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default" id="rowValContabil">
+				<div class="panel-heading" id="corAzul">
+					<h3 class="panel-title" style="color: rgb(255, 255, 255);">Validação controller</h3>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="form-group col-md-4">
+							<label for="usuarioAnalise">Responsável pela análise</label>
+							<input type="text" class="form-control" id="usuarioAnalise" name="usuarioAnalise" readonly>
+						</div>
+						<div class="form-group col-md-2">
+							<label for="dataAnalise">Data validação</label>
+							<input class="form-control" type="text" id="dataAnalise" name="dataAnalise" readonly>
+						</div>
+						<div class="form-group col-md-4">
+							<label for="aprovAnalise" class="required">Aprovação do projeto </label>
+							<select class="form-control" name="aprovAnalise" id="aprovAnalise">
+								<option value="">Selecione...</option>
+								<option value="revisar_dados">Revisar dados</option>
+								<option value="aprovado">Aprovado</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group  col-md-12">
+							<label for="obsAnalise" class="required">Observação </label>
+							<textarea class="form-control" id="obsAnalise" name="obsAnalise" rows="3"
+								placeholder="Insira uma Observação"></textarea>
+						</div>
+
+					</div>
+				</div>
+			</div>
 
 
 		</form>

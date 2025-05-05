@@ -28,7 +28,7 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>Projeto para aprofundamento de estudos Maykon.</processId>
-      <version>8</version>
+      <version>12</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
     <formId>1466</formId>
@@ -626,10 +626,24 @@
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
         <expressionOrder>1</expressionOrder>
-        <version>8</version>
+        <version>12</version>
         <sequence>10</sequence>
       </conditionProcessStatePK>
-      <condition>true</condition>
+      <condition>hAPI.getCardValue(&quot;aprovProjeto&quot;) == &quot;revisar_dados&quot;</condition>
+      <destinationSequenceId>7</destinationSequenceId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;BaseActivity&gt;7&lt;/BaseActivity&gt;&lt;Returns&gt;Last&lt;/Returns&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId>Executor Atividade</engineAllocationId>
+      <conditionType>0</conditionType>
+    </ConditionProcessState>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>AberturadeProjetos</processId>
+        <expressionOrder>2</expressionOrder>
+        <version>12</version>
+        <sequence>10</sequence>
+      </conditionProcessStatePK>
+      <condition>hAPI.getCardValue(&quot;aprovProjeto&quot;) == &quot;aprovado&quot;</condition>
       <destinationSequenceId>12</destinationSequenceId>
       <conditionType>0</conditionType>
     </ConditionProcessState>
@@ -637,8 +651,20 @@
       <conditionProcessStatePK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
+        <expressionOrder>3</expressionOrder>
+        <version>12</version>
+        <sequence>10</sequence>
+      </conditionProcessStatePK>
+      <condition>hAPI.getCardValue(&quot;aprovProjeto&quot;) == &quot;reprovado&quot;</condition>
+      <destinationSequenceId>30</destinationSequenceId>
+      <conditionType>0</conditionType>
+    </ConditionProcessState>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>AberturadeProjetos</processId>
         <expressionOrder>1</expressionOrder>
-        <version>8</version>
+        <version>12</version>
         <sequence>14</sequence>
       </conditionProcessStatePK>
       <condition>true</condition>
@@ -650,7 +676,7 @@
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
         <expressionOrder>1</expressionOrder>
-        <version>8</version>
+        <version>12</version>
         <sequence>20</sequence>
       </conditionProcessStatePK>
       <condition>true</condition>
@@ -662,7 +688,7 @@
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
         <expressionOrder>1</expressionOrder>
-        <version>8</version>
+        <version>12</version>
         <sequence>24</sequence>
       </conditionProcessStatePK>
       <condition>true</condition>
@@ -674,7 +700,7 @@
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
         <expressionOrder>1</expressionOrder>
-        <version>8</version>
+        <version>12</version>
         <sequence>28</sequence>
       </conditionProcessStatePK>
       <condition>true</condition>
@@ -1050,9 +1076,13 @@
         <processId>AberturadeProjetos</processId>
         <version>1</version>
       </workflowProcessEventPK>
-      <eventDescription>function afterTaskCreate(colleagueId){&#xd;
+      <eventDescription>&#xd;
+// Script para depois que a solicitação for criada, ele pegar o numero do processo e preencher o campo de numero&#xd;
+// de solicitação na aba de dados do processo.&#xd;
+function afterTaskCreate(colleagueId){&#xd;
     var numSolicitacao = getValue(&quot;WKNumProces&quot;);&#xd;
 	&#xd;
+    //hAPI usado para destrichar o getValue e pegar o valor do numero do processo.&#xd;
     hAPI.setCardValue(&quot;numSolicitacao&quot;, numSolicitacao);&#xd;
 &#xd;
 }</eventDescription>
@@ -1164,18 +1194,18 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>8</version>
+        <version>12</version>
         <linkSequence>9</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
-      <positionX>299</positionX>
-      <positionY>147</positionY>
+      <positionX>298</positionX>
+      <positionY>146</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>8</version>
+        <version>12</version>
         <linkSequence>16</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1186,7 +1216,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>8</version>
+        <version>12</version>
         <linkSequence>17</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1197,7 +1227,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>8</version>
+        <version>12</version>
         <linkSequence>33</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1208,7 +1238,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>8</version>
+        <version>12</version>
         <linkSequence>34</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1219,7 +1249,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>8</version>
+        <version>12</version>
         <linkSequence>35</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1230,7 +1260,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>8</version>
+        <version>12</version>
         <linkSequence>36</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1241,7 +1271,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>8</version>
+        <version>12</version>
         <linkSequence>37</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1252,7 +1282,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>8</version>
+        <version>12</version>
         <linkSequence>39</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1263,7 +1293,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>8</version>
+        <version>12</version>
         <linkSequence>39</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -1274,7 +1304,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>8</version>
+        <version>12</version>
         <linkSequence>39</linkSequence>
         <bendSequence>3</bendSequence>
       </processLinkBendPK>
@@ -1285,18 +1315,18 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>8</version>
+        <version>12</version>
         <linkSequence>40</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
-      <positionX>601</positionX>
-      <positionY>161</positionY>
+      <positionX>602</positionX>
+      <positionY>162</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>8</version>
+        <version>12</version>
         <linkSequence>41</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>

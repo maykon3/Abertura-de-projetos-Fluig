@@ -1,38 +1,53 @@
 $(document).ready(function () {
-    
+
     var data = new Date();
-        var dia = data.getDate();
-        // o valor mes(Month), vem com o valor de um mes antes por o array e de 0 a 11, por isso somamos 1.
-        var mes = data.getMonth() + 1;
-        var ano = data.getFullYear();
-        // Para que os meses fiquem com dois digitos, se o mes for menor que 10, adicionamos um zero a esquerda.
-        if (mes < 10) {
-            mes = '0' + mes;
-        } else {
-            mes = mes;
-        }
-        // Para que os dias fiquem com dois digitos, se o dia for menor que 10, adicionamos um zero a esquerda.
-        if (dia < 10) {
-            dia = '0' + dia;
-            var diaMenor = dia;
-        } else {
-            diaMenor = dia;
-        }
+    var dia = data.getDate();
+    // o valor mes(Month), vem com o valor de um mes antes por o array e de 0 a 11, por isso somamos 1.
+    var mes = data.getMonth() + 1;
+    var ano = data.getFullYear();
+    // Para que os meses fiquem com dois digitos, se o mes for menor que 10, adicionamos um zero a esquerda.
+    if (mes < 10) {
+        mes = '0' + mes;
+    } else {
+        mes = mes;
+    }
+    // Para que os dias fiquem com dois digitos, se o dia for menor que 10, adicionamos um zero a esquerda.
+    if (dia < 10) {
+        dia = '0' + dia;
+        var diaMenor = dia;
+    } else {
+        diaMenor = dia;
+    }
 
-        var hoje = diaMenor + '/' + mes + '/' + ano;
+    var hoje = diaMenor + '/' + mes + '/' + ano;
 
+    var voltouGestor = 0
 
     // Verifica em qual estado esta o diagrama e preenche o capo de data com a data do dia.
     if (stateProcess == 0) {
-        
+        var revisar = $("#aprovProjeto").val();
+        if (revisar == "revisar_dados") {
+            voltouGestor = 1;
+        }else if (revisar == "aprovado") {
+            voltouGestor = 0;
+        }
+
         $('#calendario').val(hoje);
-    
-        // Esconde a div do gesto no estado 0 do diagrama.
-        $("#rowValGestor").hide();
+        if (voltouGestor == 1) {
+            // aparece a div do gesto no estado 0 do diagrama caso o gestor tenha voltado para o estado 0.
+            $("#rowValGestor").show();
+        } else {
+            // Esconde a div do gesto no estado 0 do diagrama.
+            $("#rowValGestor").hide();
+        }
+
+
+    } else if (stateProcess == 7) {
+            $("#rowValGestor").show();
+            $('#dataValidacao').val(hoje);
     }
-    else if (stateProcess == 8) {
-        $("#rowValGestor").show();
-        $('#dataValidacao').val(hoje);
+    else if (stateProcess > 10) {
+
     }
 
 })
@@ -61,7 +76,7 @@ function removedZoomItem(removedItem) {
     }
 }
 
-function addFonte(){
+function addFonte() {
     wdkAddChild("tableFonte");
 }
 
@@ -71,8 +86,8 @@ function addLinha() {
     var linha = newId
 
     // Torna os camppos de text ara numericos com estilos de mascara 
-    $("#quantia___" + linha).mask('000.000.000.000.000', {reverse: true});
-    $("#unitario___" + linha).mask('000.000.000.000.000,00', {reverse: true});
+    $("#quantia___" + linha).mask('000.000.000.000.000', { reverse: true });
+    $("#unitario___" + linha).mask('000.000.000.000.000,00', { reverse: true });
 
     calcularTotal();
 
@@ -124,12 +139,12 @@ function removeFonte(element) {
     }
 }
 
-var beforeSendValidate = function(numState, nextState) {
+var beforeSendValidate = function (numState, nextState) {
     if (numState == 1 && nextState == 2 && document.form.codigo.value == '') {
-      throw ("Erro: Para movimentar para a atividade 2, o código deve ser preenchido");
+        throw ("Erro: Para movimentar para a atividade 2, o código deve ser preenchido");
     }
     return true;
-  }
+}
 
 
 
