@@ -1,3 +1,5 @@
+
+
 /*function validateForm(form) {
     // Valida campos principais
     if (form.getValue('empresa') == "") {
@@ -78,6 +80,31 @@
                 throw "O prazo de financiamento não foi informado na linha da fonte de recursos.";
             }
         }
+    }
+
+    if (form.getValue("subAtivos") == "" ){
+        throw "O campo Substituição de ativos não foi preenchido!";
+    }
+    if (form.getValue("morAtivos") == "" ){
+        throw "O campo Modernização de ativos não foi preenchido!";
+    }
+    if (form.getValue("melhOpera") == "" ){
+        throw "O campo Melhoria da operação não foi preenchido!";
+    }
+    if (form.getValue("ampliacao") == "" ){
+        throw "O campo Ampliação da capacidade operacional não foi preenchido!";
+    }
+    if (form.getValue("primarizacao") == "" ){
+        throw "O campo Primarização e planejamento tributário não foi preenchido!";
+    }
+    if (form.getValue("exigContratuais") == "" ){
+        throw "O campo Exigências Contratuais não foi preenchido!";
+    }
+    if (form.getValue("exigAmbientais") == "" ){
+        throw "O campo Exigências ambientais de segurança não foi preenchido!";
+    }
+    if (form.getValue("novosProdutos") == "" ){
+        throw "O campo Novos produtos e serviços não foi preenchido!";
     }
 }*/
 

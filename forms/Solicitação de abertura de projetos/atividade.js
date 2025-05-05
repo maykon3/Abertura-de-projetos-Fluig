@@ -31,7 +31,6 @@ $(document).ready(function () {
         $("#rowValGestor").hide();
     }
     else if (stateProcess == 8) {
-
         $("#rowValGestor").show();
         $('#dataValidacao').val(hoje);
     }
@@ -113,14 +112,24 @@ function totalFinal() {
 }
 
 function removeLinha(elemento) {
-    fnWdkRemoveChild(elemento);
-    totalFinal();
-    
+    if (stateProcess == 0) {
+        fnWdkRemoveChild(elemento);
+        totalFinal();
+    }
 }
 
 function removeFonte(element) {
-    fnWdkRemoveChild(element);
+    if (stateProcess == 0) {
+        fnWdkRemoveChild(element);
+    }
 }
+
+var beforeSendValidate = function(numState, nextState) {
+    if (numState == 1 && nextState == 2 && document.form.codigo.value == '') {
+      throw ("Erro: Para movimentar para a atividade 2, o código deve ser preenchido");
+    }
+    return true;
+  }
 
 
 

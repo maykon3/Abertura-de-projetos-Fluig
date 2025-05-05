@@ -14,7 +14,7 @@
 
 <body>
 	<div class="fluig-style-guide">
-		<form name="form" role="form">
+		<form name="form" id="form" role="form">
 			<div class="panel panel-default">
 				<div class="panel-body">
 					<h1>Solicitação de abertura de projetos</h1>
@@ -127,7 +127,7 @@
 										<td>
 											<div class="col-md-1">
 												<i class="fluigicon fluigicon-remove-sign icon-thumbnail-xs"
-													aria-hidden="true" style="cursor: pointer;"
+													aria-hidden="true" style="cursor: pointer;" id="removeLinha"
 													onclick="removeLinha(this);"></i>
 											</div>
 										</td>
@@ -219,7 +219,7 @@
 				</div>
 				<div class="panel-body">
 					<div class="form-group">
-						<button type="button" class="btn btn-success" id="botaoIncluir" style="cursor: pointer;"
+						<button type="button" class="btn btn-success" id="botaoIncluirFonte" style="cursor: pointer;"
 							onclick="addFonte();">Incluir</button>
 					</div>
 					<div class="row">
@@ -295,7 +295,7 @@
 							<label for="subAtivos" class="required">Substituição de ativos (inclusive sinistros)
 							</label>
 							<select class="form-control" name="subAtivos" id="subAtivos">
-								<option value="0">--Selecione--</option>
+								<option value="">--Selecione--</option>
 								<option value="1">Sim</option>
 								<option value="2">Não</option>
 							</select>
@@ -303,7 +303,7 @@
 						<div class="form-group col-md-3 ">
 							<label for="morAtivos" class="required">Modernização de ativos </label>
 							<select class="form-control" name="morAtivos" id="morAtivos">
-								<option value="0">--Selecione--</option>
+								<option value="">--Selecione--</option>
 								<option value="1">Sim</option>
 								<option value="2">Não</option>
 							</select>
@@ -311,7 +311,7 @@
 						<div class="form-group col-md-3 ">
 							<label for="melhOpera" class="required">Melhoria da operação (tecnologia) </label>
 							<select class="form-control" name="melhOpera" id="melhOpera">
-								<option value="0">--Selecione--</option>
+								<option value="">--Selecione--</option>
 								<option value="1">Sim</option>
 								<option value="2">Não</option>
 							</select>
@@ -319,7 +319,7 @@
 						<div class="form-group col-md-3 ">
 							<label for="ampliacao" class="required">Ampliação da capacidade operacional </label>
 							<select class="form-control" name="ampliacao" id="ampliacao">
-								<option value="0">--Selecione--</option>
+								<option value="">--Selecione--</option>
 								<option value="1">Sim</option>
 								<option value="2">Não</option>
 							</select>
@@ -329,7 +329,7 @@
 						<div class="form-group col-md-3 ">
 							<label for="exigContratuais" class="required">Exigências contratuais do cliente </label>
 							<select class="form-control" name="exigContratuais" id="exigContratuais">
-								<option value="0">--Selecione--</option>
+								<option value="">--Selecione--</option>
 								<option value="1">Sim</option>
 								<option value="2">Não</option>
 							</select>
@@ -337,7 +337,7 @@
 						<div class="form-group col-md-3 ">
 							<label for="primarizacao" class="required">Primarização e planejamento tributário </label>
 							<select class="form-control" name="primarizacao" id="primarizacao">
-								<option value="0">--Selecione--</option>
+								<option value="">--Selecione--</option>
 								<option value="1">Sim</option>
 								<option value="2">Não</option>
 							</select>
@@ -345,7 +345,7 @@
 						<div class="form-group col-md-3 ">
 							<label for="exigAmbientais" class="required">Exigências ambientais de segurança </label>
 							<select class="form-control" name="exigAmbientais" id="exigAmbientais">
-								<option value="0">--Selecione--</option>
+								<option value="">--Selecione--</option>
 								<option value="1">Sim</option>
 								<option value="2">Não</option>
 							</select>
@@ -353,7 +353,7 @@
 						<div class="form-group col-md-3 ">
 							<label for="novosProdutos" class="required">Novos produtos e serviços </label>
 							<select class="form-control" name="novosProdutos" id="novosProdutos">
-								<option value="0">--Selecione--</option>
+								<option value="">--Selecione--</option>
 								<option value="1">Sim</option>
 								<option value="2">Não</option>
 							</select>
@@ -385,7 +385,7 @@
 								<option value="0">Selecione</option>
 								<option value="1">Revisar dados</option>
 								<option value="2">Aprovado</option>
-								<option value="2">Reprovado</option>
+								<option value="3">Reprovado</option>
 							</select>
 						</div>
 					</div>
