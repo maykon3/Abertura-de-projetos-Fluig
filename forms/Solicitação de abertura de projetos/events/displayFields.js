@@ -10,6 +10,18 @@ function displayFields(form, customHTML) {
     if (getValue("WKNumState") == 8) {
         form.setValue("respoAnalise", user.colleagueName);
     }
+    if (getValue("WKNumState") == 12) {
+        form.setValue("usuarioRespo", user.colleagueName);
+    }
+    if (getValue("WKNumState") == 18) {
+        form.setValue("usuarioAnalise", user.colleagueName);
+    }
+    if (getValue("WKNumState") == 22) {
+        form.setValue("usuarioDiretoria", user.colleagueName);
+    }
+    if (getValue("WKNumState") == 26) {
+        form.setValue("usuarioPresidencia", user.colleagueName);
+    }
 
 
     

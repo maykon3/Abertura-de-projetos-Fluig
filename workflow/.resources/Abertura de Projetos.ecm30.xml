@@ -28,7 +28,7 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>Projeto para aprofundamento de estudos Maykon.</processId>
-      <version>12</version>
+      <version>14</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
     <formId>1466</formId>
@@ -59,8 +59,8 @@
       <deadlineTime>0</deadlineTime>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
-      <engineAllocationId></engineAllocationId>
-      <engineAllocationConfiguration></engineAllocationConfiguration>
+      <engineAllocationId>Grupo</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;PERMISSAO_INICIO_PRJ001_SOLICITACAO_DE_ABERT_PROJ&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>1</selectColleague>
       <initialState>true</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -106,11 +106,12 @@
       <stateName>Avaliação do gestor de Projetos</stateName>
       <stateDescription>Avaliação do gestor de Projetos</stateDescription>
       <instruction></instruction>
-      <deadlineTime>0</deadlineTime>
+      <deadlineTime>28800</deadlineTime>
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
-      <engineAllocationId></engineAllocationId>
+      <engineAllocationId>Grupo</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;GERENCIA_PROJETOS&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -157,10 +158,12 @@
       <stateName>Valida documentos </stateName>
       <stateDescription>Valida documentos </stateDescription>
       <instruction></instruction>
-      <deadlineTime>0</deadlineTime>
+      <deadlineTime>28800</deadlineTime>
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Grupo</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;CONTABIL&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -184,7 +187,7 @@
       <allowanceManagerTime>0</allowanceManagerTime>
       <frequenceManagerTime>0</frequenceManagerTime>
       <inhibitTransfer>false</inhibitTransfer>
-      <periodId></periodId>
+      <periodId>Default</periodId>
       <stateType>0</stateType>
       <bpmnType>80</bpmnType>
       <signalId>0</signalId>
@@ -207,10 +210,12 @@
       <stateName>Aprovação Controller</stateName>
       <stateDescription>Aprovação Controller</stateDescription>
       <instruction></instruction>
-      <deadlineTime>0</deadlineTime>
+      <deadlineTime>28800</deadlineTime>
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Grupo</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;Controller&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -257,10 +262,12 @@
       <stateName>Aprovação diretoria</stateName>
       <stateDescription>Aprovação diretoria</stateDescription>
       <instruction></instruction>
-      <deadlineTime>0</deadlineTime>
+      <deadlineTime>28800</deadlineTime>
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Grupo</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;DIRETORIA&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -307,10 +314,12 @@
       <stateName>Aprovação Presidente</stateName>
       <stateDescription>Aprovação Presidente</stateDescription>
       <instruction></instruction>
-      <deadlineTime>0</deadlineTime>
+      <deadlineTime>28800</deadlineTime>
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Grupo</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;PRESIDENCIA&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -357,10 +366,12 @@
       <stateName>Avalia Atendimento </stateName>
       <stateDescription>Avalia Atendimento </stateDescription>
       <instruction></instruction>
-      <deadlineTime>0</deadlineTime>
+      <deadlineTime>14400</deadlineTime>
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Executor Atividade</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;BaseActivity&gt;7&lt;/BaseActivity&gt;&lt;Returns&gt;Last&lt;/Returns&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -407,10 +418,12 @@
       <stateName>Cadastra projetos no sistema protheus e informa dados do cadastro </stateName>
       <stateDescription>Cadastra projetos no sistema protheus e informa dados do cadastro </stateDescription>
       <instruction></instruction>
-      <deadlineTime>0</deadlineTime>
+      <deadlineTime>28800</deadlineTime>
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Grupo</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;CONTABIL&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -626,7 +639,7 @@
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
         <expressionOrder>1</expressionOrder>
-        <version>12</version>
+        <version>14</version>
         <sequence>10</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;aprovProjeto&quot;) == &quot;revisar_dados&quot;</condition>
@@ -640,7 +653,7 @@
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
         <expressionOrder>2</expressionOrder>
-        <version>12</version>
+        <version>14</version>
         <sequence>10</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;aprovProjeto&quot;) == &quot;aprovado&quot;</condition>
@@ -652,7 +665,7 @@
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
         <expressionOrder>3</expressionOrder>
-        <version>12</version>
+        <version>14</version>
         <sequence>10</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;aprovProjeto&quot;) == &quot;reprovado&quot;</condition>
@@ -664,7 +677,7 @@
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
         <expressionOrder>1</expressionOrder>
-        <version>12</version>
+        <version>14</version>
         <sequence>14</sequence>
       </conditionProcessStatePK>
       <condition>true</condition>
@@ -676,7 +689,7 @@
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
         <expressionOrder>1</expressionOrder>
-        <version>12</version>
+        <version>14</version>
         <sequence>20</sequence>
       </conditionProcessStatePK>
       <condition>true</condition>
@@ -688,7 +701,7 @@
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
         <expressionOrder>1</expressionOrder>
-        <version>12</version>
+        <version>14</version>
         <sequence>24</sequence>
       </conditionProcessStatePK>
       <condition>true</condition>
@@ -700,7 +713,7 @@
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
         <expressionOrder>1</expressionOrder>
-        <version>12</version>
+        <version>14</version>
         <sequence>28</sequence>
       </conditionProcessStatePK>
       <condition>true</condition>
@@ -1092,10 +1105,10 @@ function afterTaskCreate(colleagueId){&#xd;
   <list>
     <SwimLane>
       <color>FFFFFF</color>
-      <height>191</height>
+      <height>220</height>
       <width>650</width>
       <positionX>100</positionX>
-      <positionY>830</positionY>
+      <positionY>850</positionY>
       <stateName>Diretoria</stateName>
       <type>2</type>
       <parentSequence>0</parentSequence>
@@ -1108,10 +1121,10 @@ function afterTaskCreate(colleagueId){&#xd;
     </SwimLane>
     <SwimLane>
       <color>FFFFFF</color>
-      <height>201</height>
+      <height>221</height>
       <width>650</width>
       <positionX>100</positionX>
-      <positionY>250</positionY>
+      <positionY>230</positionY>
       <stateName>Gerencia Projetos </stateName>
       <type>2</type>
       <parentSequence>0</parentSequence>
@@ -1124,7 +1137,7 @@ function afterTaskCreate(colleagueId){&#xd;
     </SwimLane>
     <SwimLane>
       <color>FFFFFF</color>
-      <height>191</height>
+      <height>211</height>
       <width>650</width>
       <positionX>100</positionX>
       <positionY>450</positionY>
@@ -1140,10 +1153,10 @@ function afterTaskCreate(colleagueId){&#xd;
     </SwimLane>
     <SwimLane>
       <color>FFFFFF</color>
-      <height>191</height>
+      <height>200</height>
       <width>650</width>
       <positionX>100</positionX>
-      <positionY>640</positionY>
+      <positionY>660</positionY>
       <stateName>Controller </stateName>
       <type>2</type>
       <parentSequence>0</parentSequence>
@@ -1156,7 +1169,7 @@ function afterTaskCreate(colleagueId){&#xd;
     </SwimLane>
     <SwimLane>
       <color>FFFFFF</color>
-      <height>251</height>
+      <height>231</height>
       <width>650</width>
       <positionX>100</positionX>
       <positionY>0</positionY>
@@ -1172,10 +1185,10 @@ function afterTaskCreate(colleagueId){&#xd;
     </SwimLane>
     <SwimLane>
       <color>FFFFFF</color>
-      <height>341</height>
+      <height>291</height>
       <width>650</width>
       <positionX>100</positionX>
-      <positionY>1020</positionY>
+      <positionY>1070</positionY>
       <stateName>Presidente</stateName>
       <type>2</type>
       <parentSequence>0</parentSequence>
@@ -1194,7 +1207,7 @@ function afterTaskCreate(colleagueId){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>12</version>
+        <version>14</version>
         <linkSequence>9</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1205,7 +1218,18 @@ function afterTaskCreate(colleagueId){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>12</version>
+        <version>14</version>
+        <linkSequence>11</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>300</positionX>
+      <positionY>351</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>AberturadeProjetos</processId>
+        <version>14</version>
         <linkSequence>16</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1216,7 +1240,7 @@ function afterTaskCreate(colleagueId){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>12</version>
+        <version>14</version>
         <linkSequence>17</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1227,7 +1251,7 @@ function afterTaskCreate(colleagueId){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>12</version>
+        <version>14</version>
         <linkSequence>33</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1238,7 +1262,7 @@ function afterTaskCreate(colleagueId){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>12</version>
+        <version>14</version>
         <linkSequence>34</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1249,7 +1273,7 @@ function afterTaskCreate(colleagueId){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>12</version>
+        <version>14</version>
         <linkSequence>35</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1260,7 +1284,7 @@ function afterTaskCreate(colleagueId){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>12</version>
+        <version>14</version>
         <linkSequence>36</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1271,7 +1295,7 @@ function afterTaskCreate(colleagueId){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>12</version>
+        <version>14</version>
         <linkSequence>37</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1282,7 +1306,7 @@ function afterTaskCreate(colleagueId){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>12</version>
+        <version>14</version>
         <linkSequence>39</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1293,7 +1317,7 @@ function afterTaskCreate(colleagueId){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>12</version>
+        <version>14</version>
         <linkSequence>39</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -1304,7 +1328,7 @@ function afterTaskCreate(colleagueId){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>12</version>
+        <version>14</version>
         <linkSequence>39</linkSequence>
         <bendSequence>3</bendSequence>
       </processLinkBendPK>
@@ -1315,7 +1339,7 @@ function afterTaskCreate(colleagueId){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>12</version>
+        <version>14</version>
         <linkSequence>40</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1326,7 +1350,7 @@ function afterTaskCreate(colleagueId){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>12</version>
+        <version>14</version>
         <linkSequence>41</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1339,7 +1363,58 @@ function afterTaskCreate(colleagueId){&#xd;
   <list/>
   <list/>
   <list/>
-  <list/>
+  <list>
+    <ProcessAppConfiguration>
+      <id>0</id>
+      <tenantId>0</tenantId>
+      <processId>AberturadeProjetos</processId>
+      <processVersion>14</processVersion>
+      <stateSequence>30</stateSequence>
+      <appKey>approval</appKey>
+      <appField>title</appField>
+      <description></description>
+    </ProcessAppConfiguration>
+    <ProcessAppConfiguration>
+      <id>0</id>
+      <tenantId>0</tenantId>
+      <processId>AberturadeProjetos</processId>
+      <processVersion>14</processVersion>
+      <stateSequence>30</stateSequence>
+      <appKey>approval</appKey>
+      <appField>description</appField>
+      <description></description>
+    </ProcessAppConfiguration>
+    <ProcessAppConfiguration>
+      <id>0</id>
+      <tenantId>0</tenantId>
+      <processId>AberturadeProjetos</processId>
+      <processVersion>14</processVersion>
+      <stateSequence>30</stateSequence>
+      <appKey>approval</appKey>
+      <appField>highlight</appField>
+      <description></description>
+    </ProcessAppConfiguration>
+    <ProcessAppConfiguration>
+      <id>0</id>
+      <tenantId>0</tenantId>
+      <processId>AberturadeProjetos</processId>
+      <processVersion>14</processVersion>
+      <stateSequence>30</stateSequence>
+      <appKey>approval</appKey>
+      <appField>approve</appField>
+      <description></description>
+    </ProcessAppConfiguration>
+    <ProcessAppConfiguration>
+      <id>0</id>
+      <tenantId>0</tenantId>
+      <processId>AberturadeProjetos</processId>
+      <processVersion>14</processVersion>
+      <stateSequence>30</stateSequence>
+      <appKey>approval</appKey>
+      <appField>reject</appField>
+      <description></description>
+    </ProcessAppConfiguration>
+  </list>
   <list/>
   <list/>
 </list>
