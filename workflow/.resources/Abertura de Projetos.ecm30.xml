@@ -28,7 +28,7 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>Projeto para aprofundamento de estudos Maykon.</processId>
-      <version>14</version>
+      <version>19</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
     <formId>1466</formId>
@@ -76,7 +76,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>170</positionX>
-      <positionY>130</positionY>
+      <positionY>160</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -639,7 +639,7 @@
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
         <expressionOrder>1</expressionOrder>
-        <version>14</version>
+        <version>19</version>
         <sequence>10</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;aprovProjeto&quot;) == &quot;revisar_dados&quot;</condition>
@@ -653,7 +653,7 @@
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
         <expressionOrder>2</expressionOrder>
-        <version>14</version>
+        <version>19</version>
         <sequence>10</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;aprovProjeto&quot;) == &quot;aprovado&quot;</condition>
@@ -665,7 +665,7 @@
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
         <expressionOrder>3</expressionOrder>
-        <version>14</version>
+        <version>19</version>
         <sequence>10</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;aprovProjeto&quot;) == &quot;reprovado&quot;</condition>
@@ -677,10 +677,26 @@
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
         <expressionOrder>1</expressionOrder>
-        <version>14</version>
+        <version>19</version>
         <sequence>14</sequence>
       </conditionProcessStatePK>
-      <condition>true</condition>
+      <condition>hAPI.getCardValue(&quot;aprovContabil&quot;) == &quot;revisar_dados&quot;&#xd;
+ </condition>
+      <destinationSequenceId>7</destinationSequenceId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;BaseActivity&gt;7&lt;/BaseActivity&gt;&lt;Returns&gt;Last&lt;/Returns&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId>Executor Atividade</engineAllocationId>
+      <conditionType>0</conditionType>
+    </ConditionProcessState>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>AberturadeProjetos</processId>
+        <expressionOrder>2</expressionOrder>
+        <version>19</version>
+        <sequence>14</sequence>
+      </conditionProcessStatePK>
+      <condition>hAPI.getCardValue(&quot;aprovContabil&quot;) == &quot;aprovado&quot;
+ </condition>
       <destinationSequenceId>18</destinationSequenceId>
       <conditionType>0</conditionType>
     </ConditionProcessState>
@@ -689,10 +705,10 @@
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
         <expressionOrder>1</expressionOrder>
-        <version>14</version>
+        <version>19</version>
         <sequence>20</sequence>
       </conditionProcessStatePK>
-      <condition>true</condition>
+      <condition>hAPI.getCardValue(&quot;aprovAnalise&quot;) == &quot;aprovado&quot;</condition>
       <destinationSequenceId>22</destinationSequenceId>
       <conditionType>0</conditionType>
     </ConditionProcessState>
@@ -700,12 +716,14 @@
       <conditionProcessStatePK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <expressionOrder>1</expressionOrder>
-        <version>14</version>
-        <sequence>24</sequence>
+        <expressionOrder>2</expressionOrder>
+        <version>19</version>
+        <sequence>20</sequence>
       </conditionProcessStatePK>
-      <condition>true</condition>
-      <destinationSequenceId>26</destinationSequenceId>
+      <condition>hAPI.getCardValue(&quot;aprovAnalise&quot;) == &quot;reprovado&quot;</condition>
+      <destinationSequenceId>30</destinationSequenceId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;BaseActivity&gt;7&lt;/BaseActivity&gt;&lt;Returns&gt;Last&lt;/Returns&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId>Executor Atividade</engineAllocationId>
       <conditionType>0</conditionType>
     </ConditionProcessState>
     <ConditionProcessState>
@@ -713,7 +731,47 @@
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
         <expressionOrder>1</expressionOrder>
-        <version>14</version>
+        <version>19</version>
+        <sequence>24</sequence>
+      </conditionProcessStatePK>
+      <condition>hAPI.getCardValue(&quot;aprovDiretoria&quot;) == &quot;aprovado&quot;</condition>
+      <destinationSequenceId>26</destinationSequenceId>
+      <conditionType>0</conditionType>
+    </ConditionProcessState>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>AberturadeProjetos</processId>
+        <expressionOrder>2</expressionOrder>
+        <version>19</version>
+        <sequence>24</sequence>
+      </conditionProcessStatePK>
+      <condition>hAPI.getCardValue(&quot;aprovDiretoria&quot;) == &quot;revisar_dados&quot;</condition>
+      <destinationSequenceId>7</destinationSequenceId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;BaseActivity&gt;7&lt;/BaseActivity&gt;&lt;Returns&gt;Last&lt;/Returns&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId>Executor Atividade</engineAllocationId>
+      <conditionType>0</conditionType>
+    </ConditionProcessState>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>AberturadeProjetos</processId>
+        <expressionOrder>3</expressionOrder>
+        <version>19</version>
+        <sequence>24</sequence>
+      </conditionProcessStatePK>
+      <condition>hAPI.getCardValue(&quot;aprovDiretoria&quot;) == &quot;reprovado&quot;</condition>
+      <destinationSequenceId>30</destinationSequenceId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;BaseActivity&gt;7&lt;/BaseActivity&gt;&lt;Returns&gt;Last&lt;/Returns&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId>Executor Atividade</engineAllocationId>
+      <conditionType>0</conditionType>
+    </ConditionProcessState>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>AberturadeProjetos</processId>
+        <expressionOrder>1</expressionOrder>
+        <version>19</version>
         <sequence>28</sequence>
       </conditionProcessStatePK>
       <condition>true</condition>
@@ -965,23 +1023,6 @@
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
         <version>1</version>
-        <linkSequence>34</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>14</initialStateSequence>
-      <finalStateSequence>30</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name>Reprovado</name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>AberturadeProjetos</processId>
-        <version>1</version>
         <linkSequence>35</linkSequence>
       </processLinkPK>
       <actionLabel></actionLabel>
@@ -1207,18 +1248,18 @@ function afterTaskCreate(colleagueId){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>14</version>
+        <version>19</version>
         <linkSequence>9</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
-      <positionX>298</positionX>
-      <positionY>146</positionY>
+      <positionX>300</positionX>
+      <positionY>176</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>14</version>
+        <version>19</version>
         <linkSequence>11</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1229,7 +1270,7 @@ function afterTaskCreate(colleagueId){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>14</version>
+        <version>19</version>
         <linkSequence>16</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1240,7 +1281,7 @@ function afterTaskCreate(colleagueId){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>14</version>
+        <version>19</version>
         <linkSequence>17</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1251,7 +1292,7 @@ function afterTaskCreate(colleagueId){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>14</version>
+        <version>19</version>
         <linkSequence>33</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1262,18 +1303,7 @@ function afterTaskCreate(colleagueId){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>14</version>
-        <linkSequence>34</linkSequence>
-        <bendSequence>1</bendSequence>
-      </processLinkBendPK>
-      <positionX>472</positionX>
-      <positionY>630</positionY>
-    </ProcessLinkBend>
-    <ProcessLinkBend>
-      <processLinkBendPK>
-        <companyId>1</companyId>
-        <processId>AberturadeProjetos</processId>
-        <version>14</version>
+        <version>19</version>
         <linkSequence>35</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1284,7 +1314,7 @@ function afterTaskCreate(colleagueId){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>14</version>
+        <version>19</version>
         <linkSequence>36</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1295,7 +1325,7 @@ function afterTaskCreate(colleagueId){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>14</version>
+        <version>19</version>
         <linkSequence>37</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1306,7 +1336,7 @@ function afterTaskCreate(colleagueId){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>14</version>
+        <version>19</version>
         <linkSequence>39</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1317,7 +1347,7 @@ function afterTaskCreate(colleagueId){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>14</version>
+        <version>19</version>
         <linkSequence>39</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -1328,7 +1358,7 @@ function afterTaskCreate(colleagueId){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>14</version>
+        <version>19</version>
         <linkSequence>39</linkSequence>
         <bendSequence>3</bendSequence>
       </processLinkBendPK>
@@ -1339,7 +1369,7 @@ function afterTaskCreate(colleagueId){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>14</version>
+        <version>19</version>
         <linkSequence>40</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1350,7 +1380,7 @@ function afterTaskCreate(colleagueId){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>14</version>
+        <version>19</version>
         <linkSequence>41</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1368,7 +1398,7 @@ function afterTaskCreate(colleagueId){&#xd;
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>AberturadeProjetos</processId>
-      <processVersion>14</processVersion>
+      <processVersion>19</processVersion>
       <stateSequence>30</stateSequence>
       <appKey>approval</appKey>
       <appField>title</appField>
@@ -1378,7 +1408,7 @@ function afterTaskCreate(colleagueId){&#xd;
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>AberturadeProjetos</processId>
-      <processVersion>14</processVersion>
+      <processVersion>19</processVersion>
       <stateSequence>30</stateSequence>
       <appKey>approval</appKey>
       <appField>description</appField>
@@ -1388,7 +1418,7 @@ function afterTaskCreate(colleagueId){&#xd;
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>AberturadeProjetos</processId>
-      <processVersion>14</processVersion>
+      <processVersion>19</processVersion>
       <stateSequence>30</stateSequence>
       <appKey>approval</appKey>
       <appField>highlight</appField>
@@ -1398,7 +1428,7 @@ function afterTaskCreate(colleagueId){&#xd;
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>AberturadeProjetos</processId>
-      <processVersion>14</processVersion>
+      <processVersion>19</processVersion>
       <stateSequence>30</stateSequence>
       <appKey>approval</appKey>
       <appField>approve</appField>
@@ -1408,7 +1438,7 @@ function afterTaskCreate(colleagueId){&#xd;
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>AberturadeProjetos</processId>
-      <processVersion>14</processVersion>
+      <processVersion>19</processVersion>
       <stateSequence>30</stateSequence>
       <appKey>approval</appKey>
       <appField>reject</appField>

@@ -21,35 +21,43 @@ $(document).ready(function () {
 
     var hoje = diaMenor + '/' + mes + '/' + ano;
 
-    var voltouGestor = 0
+    var contabil = $("#aprovContabil").val();
+    var diretoria = $("#aprovDiretoria").val();
+    $("#rowValGestor").hide();
+    $("#rowValContabil").hide();
+    $("#rowValController").hide();
+    $("#rowValDiretoria").hide();
+    $("#rowValPresidencia").hide();
+    $("#rowEfetivado").hide();
+    $("#rowAvaliacao").hide();
 
     // Verifica em qual estado esta o diagrama e preenche o capo de data com a data do dia.
     if (stateProcess == 0) {
-        var revisar = $("#aprovProjeto").val();
-        if (revisar == "revisar_dados") {
-            voltouGestor = 1;
-        }else if (revisar == "aprovado") {
-            voltouGestor = 0;
-        }
-
         $('#calendario').val(hoje);
-        if (voltouGestor == 1) {
-            // aparece a div do gesto no estado 0 do diagrama caso o gestor tenha voltado para o estado 0.
-            $("#rowValGestor").show();
-        } else {
-            // Esconde a div do gesto no estado 0 do diagrama.
-            $("#rowValGestor").hide();
+    }
+    if (stateProcess > 0) {
+        $("#rowValGestor").show();
+        if (stateProcess == 8) {
+            $('#dataValidacao').val(hoje);
         }
 
-
-    } else if (stateProcess == 7) {
-            $("#rowValGestor").show();
-            $('#dataValidacao').val(hoje);
     }
-    else if (stateProcess > 10) {
-
+    if (stateProcess > 0 && (contabil == "revisar_dados" || contabil == "aprovado")) {
+        $("#rowValContabil").show();
+    } else if (stateProcess > 11 && stateProcess < 30) {
+        $("#rowValContabil").show();
+        $('#dataValidacao').val(hoje);
     }
-
+    if (stateProcess > 0 && contabil == "aprovado") {
+        $("#rowValController").show();
+        $('#dataAnalise').val(hoje);
+    }
+    if (stateProcess > 0 && (diretoria == "revisar_dados" || diretoria == "aprovado")) {
+        $("#rowValDiretoria").show();
+    } else if (stateProcess > 21 && stateProcess < 30) {
+        $("#rowValDiretoria").show();
+        $('#dataDiretoria').val(hoje);
+    }
 })
 
 
