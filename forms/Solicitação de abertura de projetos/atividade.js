@@ -40,7 +40,6 @@ $(document).ready(function () {
         if (stateProcess == 8) {
             $('#dataValidacao').val(hoje);
         }
-
     }
     if (stateProcess > 0 && (contabil == "revisar_dados" || contabil == "aprovado")) {
         $("#rowValContabil").show();
@@ -50,13 +49,27 @@ $(document).ready(function () {
     }
     if (stateProcess > 0 && contabil == "aprovado") {
         $("#rowValController").show();
-        $('#dataAnalise').val(hoje);
+        if (stateProcess == 18) {
+            $('#dataAnalise').val(hoje);
+        }
     }
     if (stateProcess > 0 && (diretoria == "revisar_dados" || diretoria == "aprovado")) {
         $("#rowValDiretoria").show();
     } else if (stateProcess > 21 && stateProcess < 30) {
         $("#rowValDiretoria").show();
         $('#dataDiretoria').val(hoje);
+    }
+    if (stateProcess > 0 && diretoria == "aprovado") {
+        $("#rowValPresidencia").show();
+        if (stateProcess == 26) {
+            $('#dataPresidencia').val(hoje);
+        }
+    }
+    if (stateProcess > 28 ) {
+        $("#rowEfetivado").show();
+    }
+    if (stateProcess == 30) {
+        $("#rowAvaliacao").show();
     }
 })
 

@@ -50,6 +50,22 @@ function enableFields(form) {
         form.setEnabled('aprovContabil', false);
         form.setEnabled('obsContabil', false);
     }
+    if (atividade > 20 || atividade < 15) {
+        form.setEnabled('aprovAnalise', false);
+        form.setEnabled('obsAnalise', false);
+    }
+    if (atividade > 23 || atividade < 20) {
+        form.setEnabled('aprovDiretoria', false);
+        form.setEnabled('obsDiretoria', false);
+    }
+    if (atividade > 27 || atividade < 25) {
+        form.setEnabled('aprovPresidencia', false);
+        form.setEnabled('obsPresidencia', false);
+    }
+    if (atividade < 31 || atividade > 39 ) {
+        form.setEnabled('efetivado', false);
+        form.setEnabled('dadosProjeto', false);
+    }
 
 
 
