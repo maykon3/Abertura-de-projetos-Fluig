@@ -23,6 +23,7 @@ $(document).ready(function () {
 
     var contabil = $("#aprovContabil").val();
     var diretoria = $("#aprovDiretoria").val();
+    var presidencia = $("#aprovPresidencia").val();
     $("#rowValGestor").hide();
     $("#rowValContabil").hide();
     $("#rowValController").hide();
@@ -43,9 +44,14 @@ $(document).ready(function () {
     }
     if (stateProcess > 0 && (contabil == "revisar_dados" || contabil == "aprovado")) {
         $("#rowValContabil").show();
+        if (stateProcess == 12){
+            $('#dataContabil').val(hoje);
+        }
     } else if (stateProcess > 11 && stateProcess < 30) {
         $("#rowValContabil").show();
-        $('#dataValidacao').val(hoje);
+        if (stateProcess == 12){
+            $('#dataContabil').val(hoje);
+        }
     }
     if (stateProcess > 0 && contabil == "aprovado") {
         $("#rowValController").show();
@@ -65,7 +71,7 @@ $(document).ready(function () {
             $('#dataPresidencia').val(hoje);
         }
     }
-    if (stateProcess > 28 ) {
+    if (stateProcess > 28  && presidencia == "aprovado") {
         $("#rowEfetivado").show();
     }
     if (stateProcess == 30) {

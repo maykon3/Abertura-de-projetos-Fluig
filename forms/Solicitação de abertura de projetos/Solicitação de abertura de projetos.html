@@ -369,7 +369,8 @@
 					<div class="row">
 						<div class="form-group col-md-4">
 							<label for="respoAnalise">Responsável pela análise</label>
-							<input type="text" class="form-control" id="respoAnalise" name="respoAnalise" value="analise" readonly>
+							<input type="text" class="form-control" id="respoAnalise" name="respoAnalise"
+								value="analise" readonly>
 						</div>
 						<div class=" form-group col-md-2">
 							<label for="dataValidacao">Data da validação</label>
@@ -403,7 +404,8 @@
 					<div class="row">
 						<div class="form-group col-md-4">
 							<label for="usuarioRespo">Usuário responsável pela validação</label>
-							<input type="text" class="form-control" id="usuarioRespo" name="usuarioRespo" value="contabil" readonly>
+							<input type="text" class="form-control" id="usuarioRespo" name="usuarioRespo"
+								value="contabil" readonly>
 						</div>
 						<div class="form-group col-md-2">
 							<label for="dataContabil">Data</label>
@@ -411,12 +413,13 @@
 						</div>
 						<div class="form-group col-md-4">
 							<label for="aprovContabil" class="required">Dados Conferem? </label>
-							<select class="form-control" name="aprovContabil" id="aprovContabil" >
+							<select class="form-control" name="aprovContabil" id="aprovContabil">
 								<option value="">Selecione...</option>
 								<option value="revisar_dados">Revisar dados</option>
 								<option value="aprovado">Aprovado</option>
 							</select>
-							<input type="hidden" class="form-control" id="hidden_aprovContabil" name="hidden_aprovContabil" value="">
+							<input type="hidden" class="form-control" id="hidden_aprovContabil"
+								name="hidden_aprovContabil" value="">
 						</div>
 					</div>
 					<div class="row">
@@ -561,23 +564,19 @@
 					<label for="tipoAtendimento">Como avalia o atendimento?</label>
 					<div class="radio">
 						<img src="satis.png" alt="Satisfeito" width="42" height="42">
-						<label for="tipoSatisfeito">
-							<h6 class="form-group">
-								<input type="radio" name="tipoSatisfeito" id="tipoSatisfeito" value="satisfeito" />
-								Satisfeito
-							</h6>
+						<label>
+						<h6><input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+						Satisfeito</h6>
 						</label>
 					</div>
 					<div class="radio">
 						<img src="insatis.png" alt="Insatisfeito" width="42" height="42">
-						<label for="tipoInsatisfeito">
-							<h6 class="form-group">
-								<input type="radio" name="tipoInsatisfeito" id="tipoInsatisfeito"
-									value="insatisfeito" />
-								Insatisfeito
-							</h6>
+						<label>
+							<h6><input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+						Insatisfeito</h6>
 						</label>
 					</div>
+					
 					<div class="row">
 						<div class="form-group  col-md-12">
 							<label for="Justificativa">Justificativa</label>
