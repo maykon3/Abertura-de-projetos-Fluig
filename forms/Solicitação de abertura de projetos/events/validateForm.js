@@ -24,7 +24,7 @@ function validateForm(form) {
 
     var linhasOrcamento = form.getChildrenIndexes("respoTable");
     if (linhasOrcamento.length == 0) {
-        throw "A tabela de fontes de orçamento não possui linhas!";
+        throw "Orçamento de gasto previsto não possui linhas!";
     } else if (linhasOrcamento.length > 0) {
         for (var i = 0; i < linhasOrcamento.length; i++) {
             var numLinha = linhasOrcamento[i];
@@ -101,6 +101,9 @@ function validateForm(form) {
     if (form.getValue("exigAmbientais") == "") {
         throw "O campo Exigências ambientais de segurança não foi preenchido!";
     }
+    if (form.getValue("novosProdutos") == "") {
+        throw "O campo Novos produtos e serviços não foi preenchido!";
+    }
 
     if (getValue("WKNumState") == 8) {
         if (form.getValue("aprovProjeto") == "") {
@@ -142,13 +145,14 @@ function validateForm(form) {
             throw "O campo Observações não foi preenchido!";
         }
     }
+
+    var option = form.getValue("#optionsRadios2");
+    var option2 = form.getValue("#optionsRadios1");
+    log.info("TESTE MAYKON option 2: " + option )
+        log.info("TESTE MAYKON option 1: " + option2 )
     if (getValue("WKNumState") == 30) {
-        if (form.getValue("optionsRadios1") == "") {
-            //
-            throw "O campo Efetivado no Protheus não foi preenchido!";
-        }
-        if (form.getValue("Justificativa") == "") {
-            throw "O campo Observações não foi preenchido!";
+        if (form.getValue("optionsRadios1") == ( null) && form.getValue("optionsRadios2") == (null) ) {
+            throw "O campo Avalia atendimento não foi preenchido!";
         }
     }
     if (getValue("WKNumState") == 38) {

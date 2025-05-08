@@ -4,7 +4,7 @@
       <companyId>1</companyId>
       <processId>AberturadeProjetos</processId>
     </processDefinitionPK>
-    <processDescription>Projeto para aprofundamento de estudos Maykon.</processDescription>
+    <processDescription>Abertura de Projetos - Maykon </processDescription>
     <instruction></instruction>
     <active>true</active>
     <publicProcess>false</publicProcess>
@@ -27,8 +27,8 @@
   <ProcessDefinitionVersion>
     <processDefinitionVersionPK>
       <companyId>1</companyId>
-      <processId>Projeto para aprofundamento de estudos Maykon.</processId>
-      <version>20</version>
+      <processId>Abertura de Projetos - Maykon </processId>
+      <version>21</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
     <formId>1466</formId>
@@ -639,7 +639,7 @@
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
         <expressionOrder>1</expressionOrder>
-        <version>20</version>
+        <version>21</version>
         <sequence>10</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;aprovProjeto&quot;) == &quot;revisar_dados&quot;</condition>
@@ -653,7 +653,7 @@
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
         <expressionOrder>2</expressionOrder>
-        <version>20</version>
+        <version>21</version>
         <sequence>10</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;aprovProjeto&quot;) == &quot;aprovado&quot;</condition>
@@ -665,7 +665,7 @@
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
         <expressionOrder>3</expressionOrder>
-        <version>20</version>
+        <version>21</version>
         <sequence>10</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;aprovProjeto&quot;) == &quot;reprovado&quot;</condition>
@@ -677,7 +677,7 @@
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
         <expressionOrder>1</expressionOrder>
-        <version>20</version>
+        <version>21</version>
         <sequence>14</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;aprovContabil&quot;) == &quot;revisar_dados&quot;&#xd;
@@ -692,7 +692,7 @@
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
         <expressionOrder>2</expressionOrder>
-        <version>20</version>
+        <version>21</version>
         <sequence>14</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;aprovContabil&quot;) == &quot;aprovado&quot;
@@ -705,7 +705,7 @@
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
         <expressionOrder>1</expressionOrder>
-        <version>20</version>
+        <version>21</version>
         <sequence>20</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;aprovAnalise&quot;) == &quot;aprovado&quot;</condition>
@@ -717,7 +717,7 @@
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
         <expressionOrder>2</expressionOrder>
-        <version>20</version>
+        <version>21</version>
         <sequence>20</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;aprovAnalise&quot;) == &quot;reprovado&quot;</condition>
@@ -731,7 +731,7 @@
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
         <expressionOrder>1</expressionOrder>
-        <version>20</version>
+        <version>21</version>
         <sequence>24</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;aprovDiretoria&quot;) == &quot;aprovado&quot;</condition>
@@ -743,7 +743,7 @@
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
         <expressionOrder>2</expressionOrder>
-        <version>20</version>
+        <version>21</version>
         <sequence>24</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;aprovDiretoria&quot;) == &quot;revisar_dados&quot;</condition>
@@ -757,7 +757,7 @@
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
         <expressionOrder>3</expressionOrder>
-        <version>20</version>
+        <version>21</version>
         <sequence>24</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;aprovDiretoria&quot;) == &quot;reprovado&quot;</condition>
@@ -771,7 +771,7 @@
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
         <expressionOrder>1</expressionOrder>
-        <version>20</version>
+        <version>21</version>
         <sequence>28</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;aprovPresidencia&quot;) == &quot;aprovado&quot;</condition>
@@ -784,7 +784,7 @@
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
         <expressionOrder>2</expressionOrder>
-        <version>20</version>
+        <version>21</version>
         <sequence>28</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;aprovPresidencia&quot;) == &quot;reprovado&quot;</condition>
@@ -1263,7 +1263,7 @@ function afterTaskCreate(colleagueId){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>20</version>
+        <version>21</version>
         <linkSequence>9</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1274,7 +1274,7 @@ function afterTaskCreate(colleagueId){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>20</version>
+        <version>21</version>
         <linkSequence>11</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1285,7 +1285,7 @@ function afterTaskCreate(colleagueId){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>20</version>
+        <version>21</version>
         <linkSequence>16</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1296,7 +1296,7 @@ function afterTaskCreate(colleagueId){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>20</version>
+        <version>21</version>
         <linkSequence>17</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1307,7 +1307,7 @@ function afterTaskCreate(colleagueId){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>20</version>
+        <version>21</version>
         <linkSequence>33</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1318,7 +1318,7 @@ function afterTaskCreate(colleagueId){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>20</version>
+        <version>21</version>
         <linkSequence>35</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1329,7 +1329,7 @@ function afterTaskCreate(colleagueId){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>20</version>
+        <version>21</version>
         <linkSequence>36</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1340,7 +1340,7 @@ function afterTaskCreate(colleagueId){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>20</version>
+        <version>21</version>
         <linkSequence>37</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1351,7 +1351,7 @@ function afterTaskCreate(colleagueId){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>20</version>
+        <version>21</version>
         <linkSequence>39</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1362,7 +1362,7 @@ function afterTaskCreate(colleagueId){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>20</version>
+        <version>21</version>
         <linkSequence>39</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -1373,7 +1373,7 @@ function afterTaskCreate(colleagueId){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>20</version>
+        <version>21</version>
         <linkSequence>39</linkSequence>
         <bendSequence>3</bendSequence>
       </processLinkBendPK>
@@ -1384,7 +1384,7 @@ function afterTaskCreate(colleagueId){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>20</version>
+        <version>21</version>
         <linkSequence>40</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1395,7 +1395,7 @@ function afterTaskCreate(colleagueId){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AberturadeProjetos</processId>
-        <version>20</version>
+        <version>21</version>
         <linkSequence>41</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1413,7 +1413,7 @@ function afterTaskCreate(colleagueId){&#xd;
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>AberturadeProjetos</processId>
-      <processVersion>20</processVersion>
+      <processVersion>21</processVersion>
       <stateSequence>30</stateSequence>
       <appKey>approval</appKey>
       <appField>title</appField>
@@ -1423,7 +1423,7 @@ function afterTaskCreate(colleagueId){&#xd;
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>AberturadeProjetos</processId>
-      <processVersion>20</processVersion>
+      <processVersion>21</processVersion>
       <stateSequence>30</stateSequence>
       <appKey>approval</appKey>
       <appField>description</appField>
@@ -1433,7 +1433,7 @@ function afterTaskCreate(colleagueId){&#xd;
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>AberturadeProjetos</processId>
-      <processVersion>20</processVersion>
+      <processVersion>21</processVersion>
       <stateSequence>30</stateSequence>
       <appKey>approval</appKey>
       <appField>highlight</appField>
@@ -1443,7 +1443,7 @@ function afterTaskCreate(colleagueId){&#xd;
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>AberturadeProjetos</processId>
-      <processVersion>20</processVersion>
+      <processVersion>21</processVersion>
       <stateSequence>30</stateSequence>
       <appKey>approval</appKey>
       <appField>approve</appField>
@@ -1453,7 +1453,7 @@ function afterTaskCreate(colleagueId){&#xd;
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>AberturadeProjetos</processId>
-      <processVersion>20</processVersion>
+      <processVersion>21</processVersion>
       <stateSequence>30</stateSequence>
       <appKey>approval</appKey>
       <appField>reject</appField>
