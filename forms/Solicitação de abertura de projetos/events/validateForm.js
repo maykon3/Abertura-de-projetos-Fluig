@@ -146,13 +146,14 @@ function validateForm(form) {
         }
     }
 
-    var option = form.getValue("#optionsRadios2");
-    var option2 = form.getValue("#optionsRadios1");
-    log.info("TESTE MAYKON option 2: " + option )
-        log.info("TESTE MAYKON option 1: " + option2 )
+    var option = form.getValue("#optionsRadios");
+        log.info("TESTE MAYKON radio: " + option )
     if (getValue("WKNumState") == 30) {
-        if (form.getValue("optionsRadios1") == ( null) && form.getValue("optionsRadios2") == (null) ) {
+        if (form.getValue("optionsRadios") == "" ) {
             throw "O campo Avalia atendimento não foi preenchido!";
+        }
+        if (form.getValue("optionsRadios") == "insatisfeito" && form.getValue("Justificativa") == "" ) {
+            throw "O campo de justificativa não foi preenchido!";
         }
     }
     if (getValue("WKNumState") == 38) {
