@@ -53,7 +53,7 @@
 
   <div class="section">
     <h2>4. Diagrama do Processo</h2>
-    <img src="Abertura de Projetos.png" alt="Diagrama do Processo" width="600" />
+    <img src="diagrama processo.png" alt="Diagrama do Processo" width="600" />
   </div>
 
   <div class="section">
