@@ -154,14 +154,14 @@ function totalFinal() {
 }
 
 function removeLinha(elemento) {
-    if (stateProcess == 0) {
+    if (stateProcess == 0 || stateProcess == 7) {
         fnWdkRemoveChild(elemento);
         totalFinal();
     }
 }
 
 function removeFonte(element) {
-    if (stateProcess == 0) {
+    if (stateProcess == 0 || stateProcess == 7) {
         fnWdkRemoveChild(element);
     }
 }
