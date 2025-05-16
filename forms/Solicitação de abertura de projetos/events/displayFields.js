@@ -2,6 +2,10 @@ function displayFields(form, customHTML) {
     //inclui o estado da solicitacao no diagrama
     customHTML.append("<script> var stateProcess = " + getValue('WKNumState') + ";</script>");
 
+    if (form.getFormMode() == "VIEW") {
+        form.setVisibleById("botaoIncluir", false);
+        form.setVisibleById("botaoIncluirFonte", false);
+    }
     //pega o id do usuario logado e preenche o campo solicitante na fase um do processo
     user = getUser(getValue("WKUser"));
     if (getValue("WKNumState") == 0) {
@@ -24,7 +28,7 @@ function displayFields(form, customHTML) {
     }
 
 
-    
+
 }
 
 // Funil para pegar o nome do usuario, login e email
@@ -54,7 +58,7 @@ function getUser(colleagueId) {
         log.error("Usuario nao encontrado para a matricula: " + colleagueId);
         throw ("Usuario nao encontrado para a matricula: " + colleagueId);
     }
-     
+
     // retorno para o user para que ele possa ser usado em outros lugares do código
     return user;
 }

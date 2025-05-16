@@ -1,7 +1,9 @@
 function enableFields(form) {
     var atividade = parseInt(getValue('WKNumState'));
+   
 
-    if (atividade > 7) {
+
+    if (atividade > 7 || atividade == 31) {
         form.setEnhancedSecurityHiddenInputs(true);
         form.setEnabled('empresa', false);
         form.setEnabled('codEmpresa', false);
@@ -62,7 +64,7 @@ function enableFields(form) {
         form.setEnabled('aprovPresidencia', false);
         form.setEnabled('obsPresidencia', false);
     }
-    if (atividade < 31 || atividade > 39 ) {
+    if (atividade < 31 || atividade > 39) {
         form.setEnabled('efetivado', false);
         form.setEnabled('dadosProjeto', false);
     }

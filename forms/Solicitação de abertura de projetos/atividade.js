@@ -44,12 +44,12 @@ $(document).ready(function () {
     }
     if (stateProcess > 0 && (contabil == "revisar_dados" || contabil == "aprovado")) {
         $("#rowValContabil").show();
-        if (stateProcess == 12){
+        if (stateProcess == 12) {
             $('#dataContabil').val(hoje);
         }
     } else if (stateProcess > 11 && stateProcess < 30) {
         $("#rowValContabil").show();
-        if (stateProcess == 12){
+        if (stateProcess == 12) {
             $('#dataContabil').val(hoje);
         }
     }
@@ -71,12 +71,44 @@ $(document).ready(function () {
             $('#dataPresidencia').val(hoje);
         }
     }
-    if (stateProcess > 28  && presidencia == "aprovado") {
+    if (stateProcess > 28 && presidencia == "aprovado") {
         $("#rowEfetivado").show();
     }
     if (stateProcess == 30) {
         $("#rowAvaliacao").show();
     }
+
+    if (stateProcess == 31 || form.getFormMode() == "VIEW") {
+        var gestor = $("#aprovProjeto").val();
+        var contabill = $("#aprovContabil").val();
+        var presi = $("#aprovPresidencia").val();
+        var controll = $("#aprovAnalise").val();
+        var diretor = $("#aprovDiretoria").val();
+        var protheus = $("#efetivado").val();
+
+        if (gestor == "aprovado" || gestor == "reprovado") {
+            $("#rowValGestor").show();
+        }
+        if (contabill == "aprovado") {
+            $("#rowValContabil").show();
+        }
+        if (presi == "aprovado" || presi == "reprovado") {
+            $("#rowValPresidencia").show();
+        }
+        if (controll == "aprovado" || cocontrollntabill == "reprovado") {
+            $("#rowValController").show();
+        }
+        if (diretor == "aprovado") {
+            $("#rowValDiretoria").show();
+        }
+        if (protheus == "sim") {
+            $("#rowEfetivado").show();
+        }
+
+        $("#rowAvaliacao").show();
+
+    }
+
 })
 
 
