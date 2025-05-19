@@ -1,6 +1,7 @@
 function displayFields(form, customHTML) {
     //inclui o estado da solicitacao no diagrama
     customHTML.append("<script> var stateProcess = " + getValue('WKNumState') + ";</script>");
+    
 
     if (form.getFormMode() == "VIEW") {
         form.setVisibleById("botaoIncluir", false);
@@ -26,6 +27,11 @@ function displayFields(form, customHTML) {
     if (getValue("WKNumState") == 26) {
         form.setValue("usuarioPresidencia", user.colleagueName);
     }
+    if (getValue("WKNumState") == 31) {
+        // No estado do processo 31, o modo de visualizar exclui o botão de excluir
+        customHTML.append('<script>$(function () { $(".action").remove(); });</script>');
+    }
+    
 
 
 

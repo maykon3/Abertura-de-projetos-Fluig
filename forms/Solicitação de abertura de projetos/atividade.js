@@ -21,9 +21,10 @@ $(document).ready(function () {
 
     var hoje = diaMenor + '/' + mes + '/' + ano;
 
-    var contabil = $("#aprovContabil").val();
-    var diretoria = $("#aprovDiretoria").val();
+    var contabil = $("#hidden_aprovContabil").val();
+    var diretoria = $("#hidden_aprovDiretoria").val();
     var presidencia = $("#aprovPresidencia").val();
+   
     $("#rowValGestor").hide();
     $("#rowValContabil").hide();
     $("#rowValController").hide();
@@ -36,10 +37,13 @@ $(document).ready(function () {
     if (stateProcess == 0) {
         $('#calendario').val(hoje);
     }
+    if (stateProcess == 31) {
+    }
     if (stateProcess > 0) {
         $("#rowValGestor").show();
         if (stateProcess == 8) {
             $('#dataValidacao').val(hoje);
+
         }
     }
     if (stateProcess > 0 && (contabil == "revisar_dados" || contabil == "aprovado")) {
@@ -74,12 +78,45 @@ $(document).ready(function () {
     if (stateProcess > 28 && presidencia == "aprovado") {
         $("#rowEfetivado").show();
     }
-    if (stateProcess == 30) {
+    if (stateProcess == 30 || stateProcess == 31) {
         $("#rowAvaliacao").show();
+        if (stateProcess == 31) {
+           var efetivo = $('#hidden_efetivado').val();
+           if (efetivo == "sim") {
+                $('#rowEfetivado').show();
+            }
+        }
     }
 
-    
+
 })
+
+function valueChanged() {
+    if (stateProcess == 8) {
+        var aprovado = $("#aprovProjeto").val();
+        $("#hidden_aprovProjeto").val(aprovado);
+    }
+    if (stateProcess == 12 ) {
+        var aprovadoContabil = $("#aprovContabil").val();
+        $("#hidden_aprovContabil").val(aprovadoContabil);
+    }
+    if (stateProcess == 18 ) {
+        var aprovadoController = $("#aprovAnalise").val();
+        $("#hidden_aprovController").val(aprovadoController);
+    }
+    if (stateProcess == 22 ) {
+        var aprovadoDiretoria = $("#aprovDiretoria").val();
+        $("#hidden_aprovDiretoria").val(aprovadoDiretoria);
+    }
+    if (stateProcess == 26 ) {
+        var aprovadoPresidencia = $("#aprovPresidencia").val();
+        $("#hidden_aprovPresidencia").val(aprovadoPresidencia);
+    }
+    if (stateProcess == 38 ) {
+        var cadastraProtheus = $("#efetivado").val();
+        $("#hidden_efetivado").val(cadastraProtheus);
+    }
+}
 
 
 

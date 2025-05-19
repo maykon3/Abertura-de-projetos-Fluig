@@ -124,7 +124,7 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>
+										<td class="action">
 											<div class="col-md-1">
 												<i class="fluigicon fluigicon-remove-sign icon-thumbnail-xs"
 													aria-hidden="true" style="cursor: pointer;" id="removeLinha"
@@ -231,10 +231,10 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>
+										<td class="action">
 											<div class="col-md-1">
-												<i class="fluigicon fluigicon-remove-sign icon-thumbnail-xs"
-													aria-hidden="true" style="cursor: pointer;"
+												<i class="fluigicon fluigicon-remove-sign icon-thumbnail-xs "
+													aria-hidden="true" style="cursor: pointer;" id="removeLinha"
 													onclick="removeLinha(this);"></i>
 											</div>
 										</td>
@@ -292,7 +292,8 @@
 				<div class="panel-body">
 					<div class="row">
 						<div class="form-group col-md-3 ">
-							<label for="subAtivos" class="required" style="font-size: 11px;">Substituição de ativos (inclusive sinistros)
+							<label for="subAtivos" class="required" style="font-size: 11px;">Substituição de ativos
+								(inclusive sinistros)
 							</label>
 							<select class="form-control" name="subAtivos" id="subAtivos">
 								<option value="">--Selecione--</option>
@@ -378,12 +379,15 @@
 						</div>
 						<div class="form-group col-md-4">
 							<label for="aprovProjeto" class="required">Aprovação do projeto </label>
-							<select class="form-control" name="aprovProjeto" id="aprovProjeto">
+							<select class="form-control" name="aprovProjeto" id="aprovProjeto"
+								onchange="valueChanged();">
 								<option value="">Selecione</option>
 								<option value="revisar_dados">Revisar dados</option>
 								<option value="aprovado">Aprovado</option>
 								<option value="reprovado">Reprovado</option>
 							</select>
+							<input type="hidden" class="form-control" id="hidden_aprovProjeto"
+								name="hidden_aprovProjeto" value="">
 						</div>
 					</div>
 					<div class="row">
@@ -413,7 +417,8 @@
 						</div>
 						<div class="form-group col-md-4">
 							<label for="aprovContabil" class="required">Dados Conferem? </label>
-							<select class="form-control" name="aprovContabil" id="aprovContabil">
+							<select class="form-control" name="aprovContabil" id="aprovContabil"
+								onchange="valueChanged();">
 								<option value="">Selecione...</option>
 								<option value="revisar_dados">Revisar dados</option>
 								<option value="aprovado">Aprovado</option>
@@ -448,11 +453,14 @@
 						</div>
 						<div class="form-group col-md-4">
 							<label for="aprovAnalise" class="required">Aprovação do projeto </label>
-							<select class="form-control" name="aprovAnalise" id="aprovAnalise">
+							<select class="form-control" name="aprovAnalise" id="aprovAnalise"
+								onchange="valueChanged();">
 								<option value="">Selecione...</option>
 								<option value="reprovado">Reprovado</option>
 								<option value="aprovado">Aprovado</option>
 							</select>
+							<input type="hidden" class="form-control" id="hidden_aprovController"
+								name="hidden_aprovController" value="">
 						</div>
 					</div>
 					<div class="row">
@@ -482,12 +490,15 @@
 						</div>
 						<div class="form-group col-md-4">
 							<label for="aprovDiretoria" class="required">Aprovação do projeto </label>
-							<select class="form-control" name="aprovDiretoria" id="aprovDiretoria">
+							<select class="form-control" name="aprovDiretoria" id="aprovDiretoria"
+								onchange="valueChanged();">
 								<option value="">Selecione...</option>
 								<option value="revisar_dados">Revisar dados</option>
 								<option value="aprovado">Aprovado</option>
 								<option value="reprovado">Reprovado</option>
 							</select>
+							<input type="hidden" class="form-control" id="hidden_aprovDiretoria"
+								name="hidden_aprovDiretoria" value="">
 						</div>
 					</div>
 					<div class="row">
@@ -518,11 +529,14 @@
 						</div>
 						<div class="form-group col-md-4">
 							<label for="aprovPresidencia" class="required">Aprovação do projeto </label>
-							<select class="form-control" name="aprovPresidencia" id="aprovPresidencia">
+							<select class="form-control" name="aprovPresidencia" id="aprovPresidencia"
+								onchange="valueChanged();">
 								<option value="">Selecione...</option>
 								<option value="reprovado">Reprovado</option>
 								<option value="aprovado">Aprovado</option>
 							</select>
+							<input type="hidden" class="form-control" id="hidden_aprovPresidencia"
+								name="hidden_aprovPresidencia" value="">
 						</div>
 					</div>
 					<div class="row">
@@ -543,10 +557,13 @@
 					<div class="row">
 						<div class="form-group col-md-3">
 							<label for="efetivado" class="required">Efetivado no Protheus </label>
-							<select class="form-control" name="efetivado" id="efetivado">
+							<select class="form-control" name="efetivado" id="efetivado" 
+							onchange="valueChanged();">
 								<option value="">Selecione...</option>
 								<option value="sim">Sim</option>
 							</select>
+							<input type="hidden" class="form-control" id="hidden_efetivado"
+								name="hidden_efetivado" value="">
 						</div>
 						<div class="form-group  col-md-9">
 							<label for="dadosProjeto" class="required">Dados do projeto cadastrado </label>
@@ -565,18 +582,18 @@
 					<div class="radio">
 						<img src="satis.png" alt="Satisfeito" width="42" height="42">
 						<label>
-						<h6><input type="radio" name="optionsRadios" id="satisfeito" value="satisfeito">
-						Satisfeito</h6>
+							<h6><input type="radio" name="optionsRadios" id="satisfeito" value="satisfeito">
+								Satisfeito</h6>
 						</label>
 					</div>
 					<div class="radio">
 						<img src="insatis.png" alt="Insatisfeito" width="42" height="42">
 						<label>
 							<h6><input type="radio" name="optionsRadios" id="insatisfeito" value="insatisfeito">
-						Insatisfeito</h6>
+								Insatisfeito</h6>
 						</label>
 					</div>
-					
+
 					<div class="row">
 						<div class="form-group  col-md-12">
 							<label for="Justificativa">Justificativa</label>
