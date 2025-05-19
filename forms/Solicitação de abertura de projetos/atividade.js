@@ -78,37 +78,7 @@ $(document).ready(function () {
         $("#rowAvaliacao").show();
     }
 
-    if (stateProcess == 31 || form.getFormMode() == "VIEW") {
-        var gestor = $("#aprovProjeto").val();
-        var contabill = $("#aprovContabil").val();
-        var presi = $("#aprovPresidencia").val();
-        var controll = $("#aprovAnalise").val();
-        var diretor = $("#aprovDiretoria").val();
-        var protheus = $("#efetivado").val();
-
-        if (gestor == "aprovado" || gestor == "reprovado") {
-            $("#rowValGestor").show();
-        }
-        if (contabill == "aprovado") {
-            $("#rowValContabil").show();
-        }
-        if (presi == "aprovado" || presi == "reprovado") {
-            $("#rowValPresidencia").show();
-        }
-        if (controll == "aprovado" || cocontrollntabill == "reprovado") {
-            $("#rowValController").show();
-        }
-        if (diretor == "aprovado") {
-            $("#rowValDiretoria").show();
-        }
-        if (protheus == "sim") {
-            $("#rowEfetivado").show();
-        }
-
-        $("#rowAvaliacao").show();
-
-    }
-
+    
 })
 
 
