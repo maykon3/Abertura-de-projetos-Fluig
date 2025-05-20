@@ -27,12 +27,15 @@ function displayFields(form, customHTML) {
     if (getValue("WKNumState") == 26) {
         form.setValue("usuarioPresidencia", user.colleagueName);
     }
-    if (getValue("WKNumState") == 31) {
+    if (getValue("WKNumState") == 0 || getValue("WKNumState") == 7 )  {
         // No estado do processo 31, o modo de visualizar exclui o botão de excluir
+        customHTML.append('<script>$(function () { $(".action").attr(); });</script>');
+    }
+    if (getValue("WKNumState") > 7) {
         customHTML.append('<script>$(function () { $(".action").remove(); });</script>');
     }
     
-
+    
 
 
 }
